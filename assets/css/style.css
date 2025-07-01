@@ -56,3 +56,40 @@ li {
 .nav-right {
   float: right;
 }
+
+.site-footer {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: #0f6065;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.4em 0.9em;
+  border: 2px solid #0f6065;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+  background-color: #0f6065;
+  color: #fff;
+}
+
+.footer-note {
+  color: #444;
+  font-size: 0.85rem;
+}
