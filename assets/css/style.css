@@ -58,11 +58,13 @@ li {
 }
 
 .site-footer {
-  background: rgba(0, 0, 0, 0.4); /* or solid #0f6065 for brand color */
+  background: rgba(0, 0, 0, 0.6); /* subtle transparency */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 2rem 0 1rem;
   text-align: center;
   margin-top: 3rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-footer .social-icons {
@@ -90,7 +92,6 @@ li {
 }
 
 .footer-note {
-  color: #bbb;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.85rem;
 }
-
