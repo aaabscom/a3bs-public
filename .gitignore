@@ -2,3 +2,5 @@
 _site/
 .jekyll-cache/
 .sass-cache/
+a3-on-github/*
+Gemfile*
