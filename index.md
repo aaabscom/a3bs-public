@@ -16,8 +16,9 @@ Welcome to the official documentation for A Cubed Business Solutions' GIMP 3 Pyt
 ## 📦 Reference Documentation
 - [Plugin Overview](docs/gimp/overviews/plugin_overview.md)
 
-[![Discord Invite](https://discord.gg/w7hmz7Vb)
+## [Discord Invite](https://discord.gg/w7hmz7Vb)
 - [Configuration](docs/discord/discord-config.md)
 - [Rules](docs/discord/rules.md)
-[Invite](docs/discord/Discord_Invite_from_G-200.png){:width="200px" max-width="100%"}](https://discord.gg/w7hmz7Vb)
+
+[![Discord Invite](docs/discord/Discord_Invite_from_G-200.png){:width="200px" max-width="100%"}]
 
