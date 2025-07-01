@@ -58,38 +58,39 @@ li {
 }
 
 .site-footer {
-  background-color: #f4f4f4;
-  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.4); /* or solid #0f6065 for brand color */
+  padding: 2rem 0 1rem;
   text-align: center;
-  border-top: 1px solid #ddd;
   margin-top: 3rem;
+  border-top: 1px solid #333;
 }
 
-.social-icons {
+.site-footer .social-icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
   justify-content: center;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.social-icons a {
-  color: #0f6065;
+.site-footer .social-icons a {
+  color: #4fd1c5; /* soft teal to contrast dark bg */
   font-weight: 600;
   text-decoration: none;
-  padding: 0.4em 0.9em;
-  border: 2px solid #0f6065;
+  padding: 0.4em 1em;
+  border: 1px solid #4fd1c5;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.2s ease-in-out;
 }
 
-.social-icons a:hover {
-  background-color: #0f6065;
-  color: #fff;
+.site-footer .social-icons a:hover {
+  background-color: #4fd1c5;
+  color: #0f0f0f;
 }
 
 .footer-note {
-  color: #444;
+  color: #bbb;
   font-size: 0.85rem;
 }
+
