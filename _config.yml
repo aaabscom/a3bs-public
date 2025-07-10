@@ -1,0 +1,12 @@
+# remote_theme: jekyll/minima
+# OR remove the line entirely
+include:
+  - favicon.ico
+baseurl: "/a3bs-public"
+title: A Cubed GIMP Docs
+description: GIMP 3 Python and class references by A Cubed
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: pretty

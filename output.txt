@@ -1,0 +1,6 @@
+Configuration file: /home/darin/a3bs-clean/a3bs-public/a3-on-github/a3bs-public/_config.yml
+            Source: /home/darin/a3bs-clean/a3bs-public/a3-on-github/a3bs-public
+       Destination: /home/darin/a3bs-clean/a3bs-public/a3-on-github/a3bs-public/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
