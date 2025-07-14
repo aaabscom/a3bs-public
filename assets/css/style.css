@@ -60,6 +60,7 @@ html, body {
   overflow-x: auto;
   padding-right: 20px;
   padding-top: 20px;
+  padding-bottom: 3rem;
 }
 
 
@@ -88,20 +89,6 @@ ul li ul {
 ul li ul li{
 	padding-bottom: 5px;
 }
-
-/*.site-footer {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 2rem 0 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: block;
-  text-align: center;
-  margin-top: auto;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}*/
 
 .site-footer .social-icons {
   display: flex;
@@ -392,18 +379,6 @@ main {
 /* ===================================== */
 /* Fixed Footer                         */
 /* ===================================== */
-/*.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background: black;
-  text-align: center;
-  padding: 1.5rem 1rem env(safe-area-inset-bottom);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}*/
-
 .site-footer {
   position: fixed;
   bottom: 0;
@@ -419,6 +394,7 @@ main {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100vw;
 }
+
 
 /* ===================================== */
 /* Table Responsiveness                 */
@@ -474,43 +450,30 @@ table td {
 }
 
 .footer-toggle-wrap {
-	margin-top: -15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -15px;
 }
 
 #footer-toggle {
-  display: flex;
+  display: inline-block;
   flex-direction: row;
-  background: transparent;
+  background: none;
   border: none;
-  color: #999;
-  font-size: 0.9rem;
-  text-align: center;
+  color: inherit;
+  font-size: 1.5rem;
   width: 100%;
   cursor: pointer;
   padding: 0.5rem;
-  transition: color 0.2s;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.2s;
+  text-align: center;
 }
 
 #footer-toggle:hover {
   color: #08a1fe;
 }
 
-/* Point down by default */
-#footer-toggle {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
 #footer-toggle.closed {
-	width: 30px;
-}
-
-#footer-toggle {
-  font-size: 1.5rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: inherit;
+  width: 30px; /* maybe remove this if not actively needed */
 }
 

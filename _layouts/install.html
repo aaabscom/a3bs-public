@@ -11,37 +11,28 @@
 		<link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 		<script>
-				document.addEventListener('DOMContentLoaded', function () {
-						const socialIcons = document.querySelector('.social-icons');
-						const toggleBtn = document.getElementById('footer-toggle');
-						const statusSocialIcons = document.querySelector('.collapsed');
+			document.addEventListener('DOMContentLoaded', () => {
+				const toggleBtn = document.getElementById('footer-toggle');
+				const socialIcons = document.querySelector('.social-icons');
 
-						const collapsedSocialState = localStorage.getItem('socialState');
-						if (collapsedSocialState == "true") {
-								socialIcons.classList.add('collapsed');
-								toggleBtn.classList.add('closed');
-								toggleBtn.style.transform = 'rotate(-90deg)';
-						} else {
-								toggleBtn.style.transform = 'rotate(90deg)';
-						}
+				if (!toggleBtn || !socialIcons) return;
 
-						if (!socialIcons || !toggleBtn) return;
+				// Restore state
+				const collapsed = localStorage.getItem('socialState') === 'true';
+				socialIcons.classList.toggle('collapsed', collapsed);
+				toggleBtn.classList.toggle('closed', collapsed);
+				toggleBtn.style.transform = collapsed ? 'rotate(-90deg)' : 'rotate(90deg)';
 
-						// Ensure expanded state on load
-
-						toggleBtn.onclick = function () {
-								const closedSocialState = localStorage.getItem('socialState');
-								if (closedSocialState == "true")
-										localStorage.setItem('socialState', "false");
-								else
-										localStorage.setItem('socialState', "true");
-
-								const collapsed = socialIcons.classList.toggle('collapsed');
-								toggleBtn.classList.toggle('closed');
-								toggleBtn.style.transform = collapsed ? 'rotate(-90deg)': 'rotate(90deg)';
-						};
+				// Click handler
+				toggleBtn.addEventListener('click', () => {
+				const isCollapsed = socialIcons.classList.toggle('collapsed');
+				toggleBtn.classList.toggle('closed', isCollapsed);
+				toggleBtn.style.transform = isCollapsed ? 'rotate(-90deg)' : 'rotate(90deg)';
+				localStorage.setItem('socialState', isCollapsed);
 				});
+			});
 		</script>
+
 	</head>
 
 	<body>
