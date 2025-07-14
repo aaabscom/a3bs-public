@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+	<head>
+		<title>{{ page.title | default: site.title }}</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
 
-  <div class='nav-wrap'>
-  <div class="tooltip left">
-		  <a class="arrow" href="javascript:history.back()" class="return-link">{% include icons/arrow.html %}</a>
-		  <span class="tooltiptext">Return to calling page</span>
-  </div>
+		<link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+		<script>
+				document.addEventListener('DOMContentLoaded', function () {
+						const socialIcons = document.querySelector('.social-icons');
+						const toggleBtn = document.getElementById('footer-toggle');
+						const statusSocialIcons = document.querySelector('.collapsed');
 
-  <div class="right-group">
-  <div class="tooltip right-left">
-		  <a class="debian" href="https://debian.org" target="_blank">{% include icons/debian.html %}</a>
-		  <span class="tooltiptext">Visit Debian Website</span>
-  </div>
-  <div class="tooltip right">
-		  <a class="vim" href="https://www.vim.org" target="_blank">{% include icons/vim.html %}</a>
-		  <span class="tooltiptext">Visit Vim Website</span>
-  </div>
-  </div>
-  </div>
+						const collapsedSocialState = localStorage.getItem('socialState');
+						if (collapsedSocialState == "true") {
+								socialIcons.classList.add('collapsed');
+								toggleBtn.classList.add('closed');
+								toggleBtn.style.transform = 'rotate(-90deg)';
+						} else {
+								toggleBtn.style.transform = 'rotate(90deg)';
+						}
 
-</head>
-<body>
+						if (!socialIcons || !toggleBtn) return;
+
+						// Ensure expanded state on load
+
+						toggleBtn.onclick = function () {
+								const closedSocialState = localStorage.getItem('socialState');
+								if (closedSocialState == "true")
+										localStorage.setItem('socialState', "false");
+								else
+										localStorage.setItem('socialState', "true");
+
+								const collapsed = socialIcons.classList.toggle('collapsed');
+								toggleBtn.classList.toggle('closed');
+								toggleBtn.style.transform = collapsed ? 'rotate(-90deg)': 'rotate(90deg)';
+						};
+				});
+		</script>
+	</head>
+
+	<body>
+
 		<div class="page-wrapper">
+			<div class='nav-wrap'>
+				<div class="tooltip left">
+					<a class="arrow" href="javascript:history.back()" class="return-link">{% include icons/arrow.html %}</a>
+					<span class="tooltiptext">Return to calling page</span>
+				</div>
+
+				<div class="right-group">
+					<div class="tooltip right-left">
+						<a class="debian" href="https://debian.org" target="_blank">{% include icons/debian.html %}</a>
+						<span class="tooltiptext">Visit Debian Website</span>
+					</div>
+					
+					<div class="tooltip right">
+						<a class="vim" href="https://www.vim.org" target="_blank">{% include icons/vim.html %}</a>
+						<span class="tooltiptext">Visit Vim Website</span>
+					</div>
+				</div>
+			</div>
+
 			<div class="main-container">
-				{{ content }}
+				<div class="content-wrapper">
+					{{ content }}
+				</div>
 			</div>
 			{% include footer.html %}
 		</div>
-</body>
+	</body>
 </html>

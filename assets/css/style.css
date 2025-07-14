@@ -47,12 +47,21 @@ html, body {
 
 .main-container {
   flex: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.55);
   border-radius: 12px;
-  margin: 20px;
-  padding-left: 10px;
-  padding-bottom: 141px;
+  padding-left: 20px;
+  padding-bottom: 300px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(3px);
+  overflow-x: auto;
 }
+
+.content-wrapper {
+  overflow-x: auto;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
 
 a {
   color: #509a89;
@@ -80,7 +89,7 @@ ul li ul li{
 	padding-bottom: 5px;
 }
 
-.site-footer {
+/*.site-footer {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -92,7 +101,7 @@ ul li ul li{
   width: 100%;
   position: fixed;
   bottom: 0;
-}
+}*/
 
 .site-footer .social-icons {
   display: flex;
@@ -115,6 +124,7 @@ ul li ul li{
 .footer-note {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.85rem;
+  padding-bottom: 10px;
 }
 
 .not-found {
@@ -204,24 +214,9 @@ ul li ul li{
   transform: translateX(0);
 }
 
-a.debian svg {
-	padding-right: 20px;
-}
-
 .icon {
   width: 32px;
   height: 32px;
-}
-
-div.nav-wrap {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-	height: 73px;
-	width: 100%;
-	position: fixed;
-	margin-top: -63px;
-	padding-top: 17px;
 }
 
 div.left {
@@ -264,9 +259,10 @@ div.right {
 }
 
 .icon.icon-debian {
+	margin-right: 20px;
 	width: 48px;
 	height: 48px;
- 	color: #696969;
+	color: #696969;
 }
 
 a:hover { transition: color 0.1s; }
@@ -291,15 +287,15 @@ a.tiktok:hover path { color: #FFFFFF; }
 a.x:hover path { color: #FFFFFF; }
 a.youtube:hover path { color: #FF0000; }
 
-@media screen and (hover: none) and (pointer: coarse), (max-width: 768px) {
-  .site-footer {
-	/*position: relative !important;*/
-    bottom: auto !important;
-    margin-top: 2rem;
-    padding-bottom: env(safe-area-inset-bottom);
-    position: sticky !important;
-    bottom: 0 !important;
-  }
+@media screen and (hover: none) and (max-width: 768px) {
+	.site-footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: #000;
+		padding-bottom: env(safe-area-inset-bottom);
+		z-index: 999;
+	}
 
   .site-footer img {
     filter: invert(100%) brightness(1.3) contrast(1.2) !important;
@@ -309,5 +305,212 @@ a.youtube:hover path { color: #FF0000; }
   .site-footer:hover img {
     filter: invert(100%) brightness(1.3) contrast(1.2) !important;
   }
+
+    html, body {
+    cursor: url('A3-16x16.cur'), url('A3-16x16.png') 0 0, auto !important;
+  }
+
+  * { cursor: url('A3-16x16.cur'), url('A3-16x16.png') 0 0, default !important; }
+}
+
+/* ===================================== */
+/* Table Responsiveness                 */
+/* ===================================== */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+table thead,
+table tbody {
+  display: table;
+  width: 100%;
+  table-layout: auto;
+}
+
+/* Optional: Table Visual Polish */
+table th, table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+/* ===================================== */
+/* Global Reset and Box Sizing          */
+/* ===================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================== */
+/* Page Structure and Scroll            */
+/* ===================================== */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0f6065;
+  color: #eee;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* Container structure */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px 10px 160px; /* Reserve space for fixed footer */
+  overflow-x: auto;
+}
+
+/* ===================================== */
+/* Sticky Header                        */
+/* ===================================== */
+.nav-wrap {
+	height: 83px;
+	margin-top: -87px;
+	padding-top: 17px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* ===================================== */
+/* Fixed Footer                         */
+/* ===================================== */
+/*.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: black;
+  text-align: center;
+  padding: 1.5rem 1rem env(safe-area-inset-bottom);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}*/
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 1.5rem 1rem env(safe-area-inset-bottom);
+  padding-top: 5px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100vw;
+}
+
+/* ===================================== */
+/* Table Responsiveness                 */
+/* ===================================== */
+table {
+  width: max-content;
+  max-width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+thead, tbody {
+  display: table;
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+/* ===================================== */
+/* Mobile Tweaks                        */
+/* ===================================== */
+@media screen and (max-width: 768px) {
+  html, body {
+    font-size: 16px;
+  }
+
+  .content-wrapper { max-width: 100vh; }
+
+  .site-footer img {
+    filter: invert(100%) brightness(1.3) contrast(1.2);
+    image-rendering: crisp-edges;
+  }
+
+  .site-footer:hover img {
+    filter: invert(100%) brightness(1.3) contrast(1.2);
+  }
+}
+
+.social-icons {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-icons.collapsed {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.footer-toggle-wrap {
+	margin-top: -15px;
+}
+
+#footer-toggle {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s;
+  transition: transform 0.3s ease;
+}
+
+#footer-toggle:hover {
+  color: #08a1fe;
+}
+
+/* Point down by default */
+#footer-toggle {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#footer-toggle.closed {
+	width: 30px;
+}
+
+#footer-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
 }
 
