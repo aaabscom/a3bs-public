@@ -233,12 +233,23 @@ div.right {
 	transform: scaleX(-1);
 }
 
-.icon.icon-gimp {
+
+/* Two icon formats */
+/* default.html */
+.icon.icon-smile {
 	width: 48px;
 	height: 48px;
  	color: #696969;
 }
 
+.icon.icon-gimp {
+	margin-right: 20px;
+	width: 48px;
+	height: 48px;
+	color: #696969;
+}
+
+/* install.html */
 .icon.icon-vim {
 	width: 48px;
 	height: 48px;
@@ -252,10 +263,28 @@ div.right {
 	color: #696969;
 }
 
+/* emojis.html */
+.icon.icon-replit {
+	width: 48px;
+	height: 48px;
+ 	color: #696969;
+}
+
+.icon.icon-chatgpt {
+	margin-right: 20px;
+	width: 48px;
+	height: 48px;
+	color: #696969;
+}
+/* End two icon formats */
+
 a:hover { transition: color 0.1s; }
 a.vim:hover path { color: #007500; }
 a.debian:hover path { color: #a80030 }
+a.chatgpt:hover path { color: #FFF }
+a.replit:hover path { color: #F26207 }
 a.gimp:hover path { color: #8c8073; }
+a.smile:hover path { color: #f7c601; }
 a.arrow:hover path { color: #50a0a9; }
 a.a3:hover path { color: #50a0a9; }
 a.bluesky:hover path { color: #0285FF; }
