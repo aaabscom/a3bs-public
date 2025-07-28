@@ -150,6 +150,7 @@ ul li ul li{
   border-bottom: 1px solid #fff;
 }
 
+/* ALL tooltips */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -169,7 +170,6 @@ ul li ul li{
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
@@ -177,131 +177,90 @@ ul li ul li{
   visibility: visible;
   opacity: 1;
 }
-
-/* Tooltip for LEFT icon – below, shifted slightly right */
-.tooltip.left .tooltiptext {
-  top: 70%;               /* place below icon */
-  left: 0;                 /* align with icon’s left edge */
-  transform: translateX(0);
-}
-
-/* Tooltip for RIGHT icon – below, shifted slightly left */
-.tooltip.right-left .tooltiptext {
-  top: 90%;
-  right: 10px;
-  left: auto;
-  transform: translateX(0);
-}
-
-/* Tooltip for RIGHT icon – below, shifted slightly left */
-.tooltip.right .tooltiptext {
-  top: 70%;
-  right: 0;                /* align with right edge */
-  left: auto;
-  transform: translateX(0);
-}
+/* End ALL tooltips */
 
 .icon {
   width: 32px;
   height: 32px;
 }
 
+/* HEADER SECTION */
+/* Shared header icon base */
+.icon-header.icon-arrow {
+	transform: scaleX(-1); /* flip on X axis */
+}
+
+.icon-header {
+  width: 48px;
+  height: 48px;
+  color: #696969;
+  margin-right: 20px; /* space between icons */
+}
+
+/* Left-side container (arrow) */
 div.left {
-	padding-left: 20px;
-	position: static;
-	float: left;
+  padding-left: 20px;
+  position: static;
+  float: left;
 }
 
+/* Right-side container (group of icons) */
 div.right-group {
-	display: block;
-	padding-right: 20px;
-	position: static;
-	float: right;
+  display: flex;
+  gap: 12px;
+  float: right;
+  padding-right: 20px;
 }
 
-div.right {
-	padding-right: 20px;
-	position: static;
-	float: right;
+/* Tooltips (shared) */
+div.nav-wrap .tooltip .tooltiptext {
+  margin-top: 20px;
+  top: 72%;
+  z-index: 1000;
 }
 
-
-.icon.icon-arrow {
-	width: 48px;
-	height: 48px;
- 	color: #696969;
-	transform: scaleX(-1);
+div.nav-wrap .tooltip.left .tooltiptext {
+	margin-top: 5px;
+	top: 65%;
 }
 
-
-/* Two icon formats */
-/* default.html */
-.icon.icon-smile {
-	width: 48px;
-	height: 48px;
- 	color: #696969;
+.tooltip:hover .tooltiptext {
+  opacity: 1;
 }
 
-.icon.icon-gimp {
-	margin-right: 20px;
-	width: 48px;
-	height: 48px;
-	color: #696969;
-}
+/* Tooltip placement for back arrow */
+.tooltip.left .tooltiptext { left: 0; margin-left: 100px; }
 
-/* install.html */
-.icon.icon-vim {
-	width: 48px;
-	height: 48px;
- 	color: #696969;
-}
-
-.icon.icon-debian {
-	margin-right: 20px;
-	width: 48px;
-	height: 48px;
-	color: #696969;
-}
-
-/* emojis.html */
-.icon.icon-replit {
-	width: 48px;
-	height: 48px;
- 	color: #696969;
-}
-
-.icon.icon-chatgpt {
-	margin-right: 20px;
-	width: 48px;
-	height: 48px;
-	color: #696969;
-}
-/* End two icon formats */
-
+/* All icons */
 a:hover { transition: color 0.1s; }
-a.vim:hover path { color: #007500; }
-a.debian:hover path { color: #a80030 }
-a.chatgpt:hover path { color: #FFF }
-a.replit:hover path { color: #F26207 }
-a.gimp:hover path { color: #8c8073; }
-a.smile:hover path { color: #f7c601; }
-a.arrow:hover path { color: #50a0a9; }
-a.a3:hover path { color: #50a0a9; }
-a.bluesky:hover path { color: #0285FF; }
-a.discord:hover path { color: #5865F2; }
-a.facebook:hover path { color: #0866FF; }
-a.github:hover path { color: #FFFFFF; }
-a.google:hover path { color: #4285F4; }
-a.instagram:hover path { color: #FF0069; }
-a.ko-fi:hover path { color: #FF6433; }
-a.linkedin:hover path { color: #2C6CAF; }
-a.mastodon:hover path { color: #6364FF; }
-a.pinterest:hover path { color: #BD081C; }
-a.reddit:hover path { color: #FF4500; }
-a.threads:hover path { color: #FFFFFF; }
-a.tiktok:hover path { color: #FFFFFF; }
-a.x:hover path { color: #FFFFFF; }
-a.youtube:hover path { color: #FF0000; }
+
+/* Hover colors (icon-specific) */
+a.gimp:hover path			{ color: #8c8073; }
+a.smile:hover path			{ color: #f7c601; }
+a.chatgpt:hover path		{ color: #ffffff; }
+a.replit:hover path			{ color: #f26207; }
+a.arrow:hover path			{ color: #50a0a9; }
+a.simpleicons:hover path	{ color: #EEE; }
+a.a3:hover path				{ color: #50a0a9; }
+a.vim:hover path			{ color: #007500; }
+a.debian:hover path			{ color: #a80030 }
+/* END HEADER SECTION */
+
+a.bluesky:hover path	{ color: #0285FF; }
+a.discord:hover path	{ color: #5865F2; }
+a.facebook:hover path	{ color: #0866FF; }
+a.github:hover path		{ color: #FFFFFF; }
+a.google:hover path		{ color: #4285F4; }
+a.instagram:hover path	{ color: #FF0069; }
+a.ko-fi:hover path		{ color: #FF6433; }
+a.linkedin:hover path	{ color: #2C6CAF; }
+a.mastodon:hover path	{ color: #6364FF; }
+a.pinterest:hover path	{ color: #BD081C; }
+a.reddit:hover path		{ color: #FF4500; }
+a.threads:hover path	{ color: #FFFFFF; }
+a.tiktok:hover path		{ color: #FFFFFF; }
+a.x:hover path			{ color: #FFFFFF; }
+a.youtube:hover path	{ color: #FF0000; }
 
 @media screen and (hover: none) and (max-width: 768px) {
 	.site-footer {
@@ -310,7 +269,6 @@ a.youtube:hover path { color: #FF0000; }
 		width: 100%;
 		background: #000;
 		padding-bottom: env(safe-area-inset-bottom);
-		z-index: 999;
 	}
 
   .site-footer img {
@@ -395,14 +353,14 @@ main {
 /* Sticky Header                        */
 /* ===================================== */
 .nav-wrap {
-	height: 83px;
-	margin-top: -87px;
-	padding-top: 17px;
+  height: 93px;
+  margin-top: -87px;
+  padding-top: 17px;
   position: sticky;
   top: 0;
-  z-index: 999;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
+  z-index: 100;
 }
 
 /* ===================================== */
@@ -413,7 +371,6 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 999;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -500,9 +457,5 @@ table td {
 
 #footer-toggle:hover {
   color: #08a1fe;
-}
-
-#footer-toggle.closed {
-  width: 30px; /* maybe remove this if not actively needed */
 }
 

@@ -1,6 +1,34 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }}</title>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-<link rel="icon" type="image/x-icon" href="/a3bs-public/favicon.ico">
+	<head>
+		<title>{{ page.title | default: site.title }}</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
 
+		<link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const toggleBtn = document.getElementById('footer-toggle');
+				const socialIcons = document.querySelector('.social-icons');
+
+				if (!toggleBtn || !socialIcons) return;
+
+				// Restore state
+				const collapsed = localStorage.getItem('socialState') === 'true';
+				socialIcons.classList.toggle('collapsed', collapsed);
+				toggleBtn.classList.toggle('closed', collapsed);
+				toggleBtn.style.transform = collapsed ? 'rotate(-90deg)' : 'rotate(90deg)';
+
+				// Click handler
+				toggleBtn.addEventListener('click', () => {
+				const isCollapsed = socialIcons.classList.toggle('collapsed');
+				toggleBtn.classList.toggle('closed', isCollapsed);
+				toggleBtn.style.transform = isCollapsed ? 'rotate(-90deg)' : 'rotate(90deg)';
+				localStorage.setItem('socialState', isCollapsed);
+				});
+			});
+		</script>
+
+	</head>

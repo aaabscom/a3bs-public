@@ -2,7 +2,6 @@
 layout: default
 title: Resources for Developers
 ---
-
 # A Cubed (A³) Resources for Developers
 <br>
 

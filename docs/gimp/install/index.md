@@ -1,9 +1,7 @@
----                                                                                                                 
+---
 layout: install
 title: GIMP Installation on Debian 13
 ---
-
-
 # Install GIMP 3.0.4 on Debian 13
 
 This guide walks through building and installing **GIMP 3.0.4** from source on **Debian 13 (Trixie)** using a clean prefix install at `$HOME/gimp-install`.
