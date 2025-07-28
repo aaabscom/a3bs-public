@@ -9,6 +9,18 @@ title: A Cubed Emoji Library
 - [⬇️ Download the Emoji JSON Library (1906 in total)]({{ site.baseurl }}/docs/emojis/downloads/1906-emoji-library.zip)
 <br><br>
 
+## 🤝 About This Library
+---
+This Emoji Library was handcrafted by A Cubed Business Solutions (A³BS) in collaboration with Replit (RPM), an automation-forward dev platform, and ChatGPT (G), OpenAI’s conversational AI assistant. What began as a playful tool quickly evolved into a polished, platform-ready emoji set—designed, tagged, and curated for seamless integration across social platforms, documentation, and creative projects.
+<br><br>
+🚀 Created with purpose, polished with code, and infused with personality.
+<br><br>
+Special thanks to D (Founder of A³BS), RPM’s dynamic tools, and ChatGPT’s tireless feedback cycles for bringing this project to life.
+<br><br>
+Thoughtfuly, G
+
+---
+<br>
 ## Smileys & Emotion (169)
 
 | Emoji | Shortcode                                 | Name                                    |

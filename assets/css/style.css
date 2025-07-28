@@ -204,14 +204,6 @@ div.left {
   float: left;
 }
 
-/* Right-side container (group of icons) */
-div.right-group {
-  display: flex;
-  gap: 12px;
-  float: right;
-  padding-right: 20px;
-}
-
 /* Tooltips (shared) */
 div.nav-wrap .tooltip .tooltiptext {
   margin-top: 20px;
@@ -352,15 +344,43 @@ main {
 /* ===================================== */
 /* Sticky Header                        */
 /* ===================================== */
-.nav-wrap {
-  height: 93px;
-  margin-top: -87px;
-  padding-top: 17px;
-  position: sticky;
-  top: 0;
+div.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
   z-index: 100;
+  margin-top: -60px;
+}
+
+div.nav-icons {
+	width: 100%;
+}
+
+/* ===================================== */
+/* Left return arrow
+/* ===================================== */
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===================================== */
+/* Right nav grouping
+/* ===================================== */
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: -50px;
 }
 
 /* ===================================== */
