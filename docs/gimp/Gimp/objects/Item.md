@@ -166,6 +166,9 @@ title: Gimp.objects
 - **id_is_layer_mask**`(*args, **kwargs)`
   - id_is_layer_mask(item_id:int) -> bool
 
+- **id_is_link_layer**`(*args, **kwargs)`
+  - id_is_link_layer(item_id:int) -> bool
+
 - **id_is_path**`(*args, **kwargs)`
   - id_is_path(item_id:int) -> bool
 
@@ -177,6 +180,9 @@ title: Gimp.objects
 
 - **id_is_valid**`(*args, **kwargs)`
   - id_is_valid(item_id:int) -> bool
+
+- **id_is_vector_layer**`(*args, **kwargs)`
+  - id_is_vector_layer(item_id:int) -> bool
 
 - **install_properties**`(*args, **kwargs)`
   - install_properties(self, pspecs:list)
@@ -214,6 +220,9 @@ title: Gimp.objects
 - **is_layer_mask**`(*args, **kwargs)`
   - is_layer_mask(self) -> bool
 
+- **is_link_layer**`(*args, **kwargs)`
+  - is_link_layer(self) -> bool
+
 - **is_path**`(*args, **kwargs)`
   - is_path(self) -> bool
 
@@ -225,6 +234,9 @@ title: Gimp.objects
 
 - **is_valid**`(*args, **kwargs)`
   - is_valid(self) -> bool
+
+- **is_vector_layer**`(*args, **kwargs)`
+  - is_vector_layer(self) -> bool
 
 - **list_properties**`(*args, **kwargs)`
   - list_properties(self) -> list

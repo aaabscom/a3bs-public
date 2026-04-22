@@ -82,3 +82,17 @@ title: Gimp.interfaces
   - type_register(parent_type:GType, type_name:str, pspecs:list) -> GType
 
 
+
+## Rasterizable
+
+### Runtime functions †††
+- **is_rasterized**`(*args, **kwargs)`
+  - is_rasterized(self) -> bool
+
+- **rasterize**`(*args, **kwargs)`
+  - rasterize(self) -> bool
+
+- **restore**`(*args, **kwargs)`
+  - restore(self) -> bool
+
+

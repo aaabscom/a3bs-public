@@ -6,8 +6,8 @@ title: GimpUi.constants
 
 ## Constants table
 
+:------------------------------------------------|------------------------------:|:-------------------:|:------------------|
 | Name | Value | Type | Documentation |
-|------------------|-------------------|-------------------|------------------|
 | COLOR_SELECTOR_BAR_SIZE | 15 | <class 'int'> | § |
 | COLOR_SELECTOR_SIZE | 150 | <class 'int'> | § |
 | ICON_APPLICATION_EXIT | application-exit | <class 'str'> | §§ |
@@ -179,10 +179,12 @@ title: GimpUi.constants
 | ICON_LAYER | gimp-layer | <class 'str'> | §§ |
 | ICON_LAYER_ANCHOR | gimp-anchor | <class 'str'> | §§ |
 | ICON_LAYER_FLOATING_SELECTION | gimp-floating-selection | <class 'str'> | §§ |
+| ICON_LAYER_LINK_LAYER | emblem-symbolic-link | <class 'str'> | §§ |
 | ICON_LAYER_MASK | gimp-layer-mask | <class 'str'> | §§ |
 | ICON_LAYER_MERGE_DOWN | gimp-merge-down | <class 'str'> | §§ |
 | ICON_LAYER_TEXT_LAYER | gimp-text-layer | <class 'str'> | §§ |
 | ICON_LAYER_TO_IMAGESIZE | gimp-layer-to-imagesize | <class 'str'> | §§ |
+| ICON_LAYER_VECTOR_LAYER | gimp-tool-path | <class 'str'> | §§ |
 | ICON_LINKED | gimp-linked | <class 'str'> | §§ |
 | ICON_LIST | gimp-list | <class 'str'> | §§ |
 | ICON_LIST_ADD | list-add | <class 'str'> | §§ |

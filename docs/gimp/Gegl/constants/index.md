@@ -6,8 +6,8 @@ title: Gegl.constants
 
 ## Constants table
 
+:------------------------------------------------|------------------------------:|:-------------------:|:------------------|
 | Name | Value | Type | Documentation |
-|------------------|-------------------|-------------------|------------------|
 | AUTO_ROWSTRIDE | unavailable | unavailable | unavailable |
 | CH_BACK_CENTER | 256 | <class 'int'> | § |
 | CH_BACK_LEFT | 16 | <class 'int'> | § |
@@ -66,7 +66,7 @@ title: Gegl.constants
 | LOOKUP_MAX_ENTRIES | 819200 | <class 'int'> | § |
 | MAJOR_VERSION | unavailable | unavailable | unavailable |
 | MAX_AUDIO_CHANNELS | 8 | <class 'int'> | § |
-| MICRO_VERSION | 62 | <class 'int'> | § |
+| MICRO_VERSION | 71 | <class 'int'> | § |
 | MINOR_VERSION | 4 | <class 'int'> | § |
 | PARAM_NO_VALIDATE | 64 | <class 'int'> | § |
 

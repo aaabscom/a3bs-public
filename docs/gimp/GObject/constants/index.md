@@ -6,8 +6,8 @@ title: GObject.constants
 
 ## Constants table
 
+:------------------------------------------------|------------------------------:|:-------------------:|:------------------|
 | Name | Value | Type | Documentation |
-|------------------|-------------------|-------------------|------------------|
 | PARAM_MASK | 255 | <class 'int'> | § |
 | PARAM_STATIC_STRINGS | 224 | <class 'int'> | § |
 | PARAM_USER_SHIFT | 8 | <class 'int'> | § |

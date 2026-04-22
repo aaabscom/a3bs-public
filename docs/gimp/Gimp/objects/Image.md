@@ -64,7 +64,7 @@ title: Gimp.objects
   - documentation unavailable
 
 - **convert_color_profile**`(*args, **kwargs)`
-  - convert_color_profile(self, profile:Gimp.ColorProfile, intent:Gimp.ColorRenderingIntent, bpc:bool) -> bool
+  - convert_color_profile(self, profile:Gimp.ColorProfile=None, intent:Gimp.ColorRenderingIntent, bpc:bool) -> bool
 
 - **convert_color_profile_from_file**`(*args, **kwargs)`
   - convert_color_profile_from_file(self, file:Gio.File, intent:Gimp.ColorRenderingIntent, bpc:bool) -> bool
@@ -169,7 +169,7 @@ title: Gimp.objects
   - get_channels(self) -> list
 
 - **get_color_profile**`(*args, **kwargs)`
-  - get_color_profile(self) -> Gimp.ColorProfile
+  - get_color_profile(self) -> Gimp.ColorProfile or None
 
 - **get_component_active**`(*args, **kwargs)`
   - get_component_active(self, component:Gimp.ChannelType) -> bool
@@ -286,7 +286,7 @@ title: Gimp.objects
   - get_simulation_intent(self) -> Gimp.ColorRenderingIntent
 
 - **get_simulation_profile**`(*args, **kwargs)`
-  - get_simulation_profile(self) -> Gimp.ColorProfile
+  - get_simulation_profile(self) -> Gimp.ColorProfile or None
 
 - **get_tattoo_state**`(*args, **kwargs)`
   - get_tattoo_state(self) -> int

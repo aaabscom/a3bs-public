@@ -4,8 +4,8 @@ title: Gimp.objects
 ---
 # Gimp.objects
 
-## LayerMask
-- :Constructors:<br /><br />::<br /><br />    LayerMask(**properties)
+## LinkLayer
+- :Constructors:<br /><br />::<br /><br />    LinkLayer(**properties)<br />    new(image:Gimp.Image, file:Gio.File) -> Gimp.LinkLayer
 
 ### Runtime attributes
 
@@ -16,6 +16,12 @@ title: Gimp.objects
 - **ref_count**
 
 ### Runtime functions
+- **add_alpha**`(*args, **kwargs)`
+  - add_alpha(self) -> bool
+
+- **add_mask**`(*args, **kwargs)`
+  - add_mask(self, mask:Gimp.LayerMask) -> bool
+
 - **append_filter**`(*args, **kwargs)`
   - append_filter(self, filter:Gimp.DrawableFilter)
 
@@ -40,9 +46,6 @@ title: Gimp.objects
 - **colorize_hsl**`(*args, **kwargs)`
   - colorize_hsl(self, hue:float, saturation:float, lightness:float) -> bool
 
-- **combine_masks**`(*args, **kwargs)`
-  - combine_masks(self, channel2:Gimp.Channel, operation:Gimp.ChannelOps, offx:int, offy:int) -> bool
-
 - **compat_control**`(self, *args, **kargs)`
   - documentation unavailable
 
@@ -62,7 +65,10 @@ title: Gimp.objects
   - documentation unavailable
 
 - **copy**`(*args, **kwargs)`
-  - copy(self) -> Gimp.Channel
+  - copy(self) -> Gimp.Layer
+
+- **create_mask**`(*args, **kwargs)`
+  - create_mask(self, mask_type:Gimp.AddMaskType) -> Gimp.LayerMask
 
 - **curves_explicit**`(*args, **kwargs)`
   - curves_explicit(self, channel:Gimp.HistogramChannel, values:list) -> bool
@@ -121,6 +127,9 @@ title: Gimp.objects
 - **find_property**`(*args, **kwargs)`
   - find_property(self, property_name:str) -> GObject.ParamSpec
 
+- **flatten**`(*args, **kwargs)`
+  - flatten(self) -> bool
+
 - **force_floating**`(self, *args, **kargs)`
   - documentation unavailable
 
@@ -133,6 +142,15 @@ title: Gimp.objects
 - **freeze_notify**`(self)`
   - Freezes the object's property-changed notification queue.<br /><br />:returns:<br />    A context manager which optionally can be used to<br />    automatically thaw notifications.<br /><br />This will freeze the object so that "notify" signals are blocked until<br />the thaw_notify() method is called.<br /><br />.. code-block:: python<br /><br />    with obj.freeze_notify():<br />        pass
 
+- **from_mask**`(*args, **kwargs)`
+  - from_mask(mask:Gimp.LayerMask) -> Gimp.Layer
+
+- **get_apply_mask**`(*args, **kwargs)`
+  - get_apply_mask(self) -> bool
+
+- **get_blend_space**`(*args, **kwargs)`
+  - get_blend_space(self) -> Gimp.LayerColorSpace
+
 - **get_bpp**`(*args, **kwargs)`
   - get_bpp(self) -> int
 
@@ -140,22 +158,31 @@ title: Gimp.objects
   - get_buffer(self) -> Gegl.Buffer
 
 - **get_by_id**`(*args, **kwargs)`
-  - get_by_id(layer_mask_id:int) -> Gimp.LayerMask or None
+  - get_by_id(layer_id:int) -> Gimp.LinkLayer or None
 
 - **get_children**`(*args, **kwargs)`
   - get_children(self) -> list
 
-- **get_color**`(*args, **kwargs)`
-  - get_color(self) -> Gegl.Color
-
 - **get_color_tag**`(*args, **kwargs)`
   - get_color_tag(self) -> Gimp.ColorTag
+
+- **get_composite_mode**`(*args, **kwargs)`
+  - get_composite_mode(self) -> Gimp.LayerCompositeMode
+
+- **get_composite_space**`(*args, **kwargs)`
+  - get_composite_space(self) -> Gimp.LayerColorSpace
 
 - **get_data**`(self, *args, **kargs)`
   - documentation unavailable
 
+- **get_edit_mask**`(*args, **kwargs)`
+  - get_edit_mask(self) -> bool
+
 - **get_expanded**`(*args, **kwargs)`
   - get_expanded(self) -> bool
+
+- **get_file**`(*args, **kwargs)`
+  - get_file(self) -> Gio.File
 
 - **get_filters**`(*args, **kwargs)`
   - get_filters(self) -> list
@@ -172,6 +199,9 @@ title: Gimp.objects
 - **get_image**`(*args, **kwargs)`
   - get_image(self) -> Gimp.Image
 
+- **get_lock_alpha**`(*args, **kwargs)`
+  - get_lock_alpha(self) -> bool
+
 - **get_lock_content**`(*args, **kwargs)`
   - get_lock_content(self) -> bool
 
@@ -180,6 +210,15 @@ title: Gimp.objects
 
 - **get_lock_visibility**`(*args, **kwargs)`
   - get_lock_visibility(self) -> bool
+
+- **get_mask**`(*args, **kwargs)`
+  - get_mask(self) -> Gimp.LayerMask
+
+- **get_mime_type**`(*args, **kwargs)`
+  - get_mime_type(self) -> str
+
+- **get_mode**`(*args, **kwargs)`
+  - get_mode(self) -> Gimp.LayerMode
 
 - **get_name**`(*args, **kwargs)`
   - get_name(self) -> str
@@ -214,8 +253,8 @@ title: Gimp.objects
 - **get_shadow_buffer**`(*args, **kwargs)`
   - get_shadow_buffer(self) -> Gegl.Buffer
 
-- **get_show_masked**`(*args, **kwargs)`
-  - get_show_masked(self) -> bool
+- **get_show_mask**`(*args, **kwargs)`
+  - get_show_mask(self) -> bool
 
 - **get_sub_thumbnail**`(*args, **kwargs)`
   - get_sub_thumbnail(self, src_x:int, src_y:int, src_width:int, src_height:int, dest_width:int, dest_height:int, alpha:Gimp.PixbufTransparency) -> GdkPixbuf.Pixbuf
@@ -331,6 +370,9 @@ title: Gimp.objects
 - **is_floating**`(*args, **kwargs)`
   - is_floating(self) -> bool
 
+- **is_floating_sel**`(*args, **kwargs)`
+  - is_floating_sel(self) -> bool
+
 - **is_gray**`(*args, **kwargs)`
   - is_gray(self) -> bool
 
@@ -354,6 +396,9 @@ title: Gimp.objects
 
 - **is_path**`(*args, **kwargs)`
   - is_path(self) -> bool
+
+- **is_rasterized**`(*args, **kwargs)`
+  - is_rasterized(self) -> bool
 
 - **is_rgb**`(*args, **kwargs)`
   - is_rgb(self) -> bool
@@ -395,10 +440,19 @@ title: Gimp.objects
   - merge_shadow(self, undo:bool) -> bool
 
 - **new**`(*args, **kwargs)`
-  - new(image:Gimp.Image, name:str, width:int, height:int, opacity:float, color:Gegl.Color) -> Gimp.Channel
+  - new(image:Gimp.Image, file:Gio.File) -> Gimp.LinkLayer
 
-- **new_from_component**`(*args, **kwargs)`
-  - new_from_component(image:Gimp.Image, component:Gimp.ChannelType, name:str) -> Gimp.Channel
+- **new_from_drawable**`(*args, **kwargs)`
+  - new_from_drawable(drawable:Gimp.Drawable, dest_image:Gimp.Image) -> Gimp.Layer
+
+- **new_from_pixbuf**`(*args, **kwargs)`
+  - new_from_pixbuf(image:Gimp.Image, name:str, pixbuf:GdkPixbuf.Pixbuf, opacity:float, mode:Gimp.LayerMode, progress_start:float, progress_end:float) -> Gimp.Layer
+
+- **new_from_surface**`(*args, **kwargs)`
+  - new_from_surface(image:Gimp.Image, name:str, surface:cairo.Surface, progress_start:float, progress_end:float) -> Gimp.Layer
+
+- **new_from_visible**`(*args, **kwargs)`
+  - new_from_visible(image:Gimp.Image, dest_image:Gimp.Image, name:str=None) -> Gimp.Layer
 
 - **newv**`(*args, **kwargs)`
   - newv(object_type:GType, parameters:list) -> GObject.Object
@@ -418,11 +472,17 @@ title: Gimp.objects
 - **posterize**`(*args, **kwargs)`
   - posterize(self, levels:int) -> bool
 
+- **rasterize**`(*args, **kwargs)`
+  - rasterize(self) -> bool
+
 - **ref**`(self, *args, **kargs)`
   - documentation unavailable
 
 - **ref_sink**`(self, *args, **kargs)`
   - documentation unavailable
+
+- **remove_mask**`(*args, **kwargs)`
+  - remove_mask(self, mode:Gimp.MaskApplyMode) -> bool
 
 - **replace_data**`(self, *args, **kargs)`
   - documentation unavailable
@@ -430,20 +490,50 @@ title: Gimp.objects
 - **replace_qdata**`(self, *args, **kargs)`
   - documentation unavailable
 
+- **resize**`(*args, **kwargs)`
+  - resize(self, new_width:int, new_height:int, offx:int, offy:int) -> bool
+
+- **resize_to_image_size**`(*args, **kwargs)`
+  - resize_to_image_size(self) -> bool
+
+- **restore**`(*args, **kwargs)`
+  - restore(self) -> bool
+
 - **run_dispose**`(*args, **kwargs)`
   - run_dispose(self)
 
-- **set_color**`(*args, **kwargs)`
-  - set_color(self, color:Gegl.Color) -> bool
+- **scale**`(*args, **kwargs)`
+  - scale(self, new_width:int, new_height:int, local_origin:bool) -> bool
+
+- **set_apply_mask**`(*args, **kwargs)`
+  - set_apply_mask(self, apply_mask:bool) -> bool
+
+- **set_blend_space**`(*args, **kwargs)`
+  - set_blend_space(self, blend_space:Gimp.LayerColorSpace) -> bool
 
 - **set_color_tag**`(*args, **kwargs)`
   - set_color_tag(self, color_tag:Gimp.ColorTag) -> bool
 
+- **set_composite_mode**`(*args, **kwargs)`
+  - set_composite_mode(self, composite_mode:Gimp.LayerCompositeMode) -> bool
+
+- **set_composite_space**`(*args, **kwargs)`
+  - set_composite_space(self, composite_space:Gimp.LayerColorSpace) -> bool
+
 - **set_data**`(self, *args, **kargs)`
   - documentation unavailable
 
+- **set_edit_mask**`(*args, **kwargs)`
+  - set_edit_mask(self, edit_mask:bool) -> bool
+
 - **set_expanded**`(*args, **kwargs)`
   - set_expanded(self, expanded:bool) -> bool
+
+- **set_file**`(*args, **kwargs)`
+  - set_file(self, file:Gio.File) -> bool
+
+- **set_lock_alpha**`(*args, **kwargs)`
+  - set_lock_alpha(self, lock_alpha:bool) -> bool
 
 - **set_lock_content**`(*args, **kwargs)`
   - set_lock_content(self, lock_content:bool) -> bool
@@ -454,8 +544,14 @@ title: Gimp.objects
 - **set_lock_visibility**`(*args, **kwargs)`
   - set_lock_visibility(self, lock_visibility:bool) -> bool
 
+- **set_mode**`(*args, **kwargs)`
+  - set_mode(self, mode:Gimp.LayerMode) -> bool
+
 - **set_name**`(*args, **kwargs)`
   - set_name(self, name:str) -> bool
+
+- **set_offsets**`(*args, **kwargs)`
+  - set_offsets(self, offx:int, offy:int) -> bool
 
 - **set_opacity**`(*args, **kwargs)`
   - set_opacity(self, opacity:float) -> bool
@@ -469,8 +565,8 @@ title: Gimp.objects
 - **set_property**`(bound native)`
   - documentation unavailable
 
-- **set_show_masked**`(*args, **kwargs)`
-  - set_show_masked(self, show_masked:bool) -> bool
+- **set_show_mask**`(*args, **kwargs)`
+  - set_show_mask(self, show_mask:bool) -> bool
 
 - **set_tattoo**`(*args, **kwargs)`
   - set_tattoo(self, tattoo:int) -> bool

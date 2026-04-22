@@ -8,16 +8,16 @@ title: GLib.enums
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| APP_NOT_REGISTERED | 2 |
-| FILE_NOT_FOUND | 7 |
 | INVALID_URI | 0 |
 | INVALID_VALUE | 1 |
+| APP_NOT_REGISTERED | 2 |
+| URI_NOT_FOUND | 3 |
 | READ | 4 |
 | UNKNOWN_ENCODING | 5 |
-| URI_NOT_FOUND | 3 |
 | WRITE | 6 |
+| FILE_NOT_FOUND | 7 |
 
 ### Other runtime attributes ‡
 - **denominator**
@@ -51,49 +51,52 @@ title: GLib.enums
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## ChecksumType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | MD5 | 0 |
 | SHA1 | 1 |
 | SHA256 | 2 |
-| SHA384 | 4 |
 | SHA512 | 3 |
+| SHA384 | 4 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ConvertError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BAD_URI | 4 |
-| EMBEDDED_NUL | 7 |
-| FAILED | 2 |
-| ILLEGAL_SEQUENCE | 1 |
-| NOT_ABSOLUTE_PATH | 5 |
 | NO_CONVERSION | 0 |
-| NO_MEMORY | 6 |
+| ILLEGAL_SEQUENCE | 1 |
+| FAILED | 2 |
 | PARTIAL_INPUT | 3 |
+| BAD_URI | 4 |
+| NOT_ABSOLUTE_PATH | 5 |
+| NO_MEMORY | 6 |
+| EMBEDDED_NUL | 7 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## DateDMY
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | DAY | 0 |
 | MONTH | 1 |
 | YEAR | 2 |
@@ -103,115 +106,119 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## DateMonth
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| APRIL | 4 |
-| AUGUST | 8 |
 | BAD_MONTH | 0 |
-| DECEMBER | 12 |
-| FEBRUARY | 2 |
 | JANUARY | 1 |
-| JULY | 7 |
-| JUNE | 6 |
+| FEBRUARY | 2 |
 | MARCH | 3 |
+| APRIL | 4 |
 | MAY | 5 |
-| NOVEMBER | 11 |
-| OCTOBER | 10 |
+| JUNE | 6 |
+| JULY | 7 |
+| AUGUST | 8 |
 | SEPTEMBER | 9 |
+| OCTOBER | 10 |
+| NOVEMBER | 11 |
+| DECEMBER | 12 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## DateWeekday
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | BAD_WEEKDAY | 0 |
-| FRIDAY | 5 |
 | MONDAY | 1 |
-| SATURDAY | 6 |
-| SUNDAY | 7 |
-| THURSDAY | 4 |
 | TUESDAY | 2 |
 | WEDNESDAY | 3 |
+| THURSDAY | 4 |
+| FRIDAY | 5 |
+| SATURDAY | 6 |
+| SUNDAY | 7 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ErrorType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| DIGIT_RADIX | 5 |
-| FLOAT_MALFORMED | 7 |
-| FLOAT_RADIX | 6 |
-| NON_DIGIT_IN_CONST | 4 |
-| UNEXP_EOF | 1 |
-| UNEXP_EOF_IN_COMMENT | 3 |
-| UNEXP_EOF_IN_STRING | 2 |
 | UNKNOWN | 0 |
+| UNEXP_EOF | 1 |
+| UNEXP_EOF_IN_STRING | 2 |
+| UNEXP_EOF_IN_COMMENT | 3 |
+| NON_DIGIT_IN_CONST | 4 |
+| DIGIT_RADIX | 5 |
+| FLOAT_RADIX | 6 |
+| FLOAT_MALFORMED | 7 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## FileError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ACCES | 2 |
-| AGAIN | 19 |
-| BADF | 16 |
 | EXIST | 0 |
-| FAILED | 24 |
-| FAULT | 10 |
-| INTR | 20 |
-| INVAL | 17 |
-| IO | 21 |
 | ISDIR | 1 |
-| LOOP | 11 |
-| MFILE | 14 |
+| ACCES | 2 |
 | NAMETOOLONG | 3 |
-| NFILE | 15 |
-| NODEV | 7 |
 | NOENT | 4 |
-| NOMEM | 13 |
-| NOSPC | 12 |
-| NOSYS | 23 |
 | NOTDIR | 5 |
 | NXIO | 6 |
-| PERM | 22 |
-| PIPE | 18 |
+| NODEV | 7 |
 | ROFS | 8 |
 | TXTBSY | 9 |
+| FAULT | 10 |
+| LOOP | 11 |
+| NOSPC | 12 |
+| NOMEM | 13 |
+| MFILE | 14 |
+| NFILE | 15 |
+| BADF | 16 |
+| INVAL | 17 |
+| PIPE | 18 |
+| AGAIN | 19 |
+| INTR | 20 |
+| IO | 21 |
+| PERM | 22 |
+| NOSYS | 23 |
+| FAILED | 24 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## IOChannelError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| FAILED | 8 |
 | FBIG | 0 |
 | INVAL | 1 |
 | IO | 2 |
@@ -220,21 +227,23 @@ title: GLib.enums
 | NXIO | 5 |
 | OVERFLOW | 6 |
 | PIPE | 7 |
+| FAILED | 8 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## IOError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| NONE | 0 |
 | AGAIN | 1 |
 | INVAL | 2 |
-| NONE | 0 |
 | UNKNOWN | 3 |
 
 ### Other runtime attributes ‡
@@ -242,99 +251,101 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## IOStatus
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| AGAIN | 3 |
-| EOF | 2 |
 | ERROR | 0 |
 | NORMAL | 1 |
+| EOF | 2 |
+| AGAIN | 3 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## KeyFileError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| UNKNOWN_ENCODING | 0 |
+| PARSE | 1 |
+| NOT_FOUND | 2 |
+| KEY_NOT_FOUND | 3 |
 | GROUP_NOT_FOUND | 4 |
 | INVALID_VALUE | 5 |
-| KEY_NOT_FOUND | 3 |
-| NOT_FOUND | 2 |
-| PARSE | 1 |
-| UNKNOWN_ENCODING | 0 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## LogWriterOutput
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| HANDLED | 1 |
 | UNHANDLED | 0 |
+| HANDLED | 1 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## MarkupError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | BAD_UTF8 | 0 |
 | EMPTY | 1 |
+| PARSE | 2 |
+| UNKNOWN_ELEMENT | 3 |
+| UNKNOWN_ATTRIBUTE | 4 |
 | INVALID_CONTENT | 5 |
 | MISSING_ATTRIBUTE | 6 |
-| PARSE | 2 |
-| UNKNOWN_ATTRIBUTE | 4 |
-| UNKNOWN_ELEMENT | 3 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## NormalizeMode
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALL | 2 |
-| ALL_COMPOSE | 3 |
-| DEFAULT | 0 |
-| DEFAULT_COMPOSE | 1 |
-| NFC | 1 |
 | NFD | 0 |
-| NFKC | 3 |
+| NFC | 1 |
 | NFKD | 2 |
+| NFKC | 3 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## NumberParserError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | INVALID | 0 |
 | OUT_OF_BOUNDS | 1 |
 
@@ -343,12 +354,13 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## OnceStatus
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | NOTCALLED | 0 |
 | PROGRESS | 1 |
 | READY | 2 |
@@ -358,132 +370,137 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## OptionArg
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CALLBACK | 3 |
-| DOUBLE | 7 |
-| FILENAME | 4 |
-| FILENAME_ARRAY | 6 |
-| INT | 2 |
-| INT64 | 8 |
 | NONE | 0 |
 | STRING | 1 |
+| INT | 2 |
+| CALLBACK | 3 |
+| FILENAME | 4 |
 | STRING_ARRAY | 5 |
+| FILENAME_ARRAY | 6 |
+| DOUBLE | 7 |
+| INT64 | 8 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## OptionError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| UNKNOWN_OPTION | 0 |
 | BAD_VALUE | 1 |
 | FAILED | 2 |
-| UNKNOWN_OPTION | 0 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## RegexError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ASSERTION_EXPECTED | 128 |
-| BACKTRACKING_CONTROL_VERB_ARGUMENT_FORBIDDEN | 159 |
-| BACKTRACKING_CONTROL_VERB_ARGUMENT_REQUIRED | 166 |
-| CHARACTER_VALUE_TOO_LARGE | 176 |
 | COMPILE | 0 |
-| DEFINE_REPETION | 155 |
-| DUPLICATE_SUBPATTERN_NAME | 143 |
-| EXPRESSION_TOO_LARGE | 120 |
-| EXTRA_SUBPATTERN_NAME | 165 |
-| HEX_CODE_TOO_LARGE | 134 |
-| INCONSISTENT_NEWLINE_OPTIONS | 156 |
-| INEXISTENT_SUBPATTERN_REFERENCE | 115 |
-| INFINITE_LOOP | 140 |
-| INTERNAL | 4 |
-| INVALID_CONDITION | 135 |
-| INVALID_CONTROL_CHAR | 168 |
-| INVALID_DATA_CHARACTER | 164 |
-| INVALID_ESCAPE_IN_CHARACTER_CLASS | 107 |
-| INVALID_OCTAL_VALUE | 151 |
-| INVALID_RELATIVE_REFERENCE | 158 |
-| MALFORMED_CONDITION | 126 |
-| MALFORMED_PROPERTY | 146 |
-| MATCH | 3 |
-| MEMORY_ERROR | 121 |
-| MISSING_BACK_REFERENCE | 157 |
-| MISSING_CONTROL_CHAR | 102 |
-| MISSING_DIGIT | 163 |
-| MISSING_NAME | 169 |
-| MISSING_SUBPATTERN_NAME | 162 |
-| MISSING_SUBPATTERN_NAME_TERMINATOR | 142 |
-| NAME_TOO_LONG | 175 |
-| NOTHING_TO_REPEAT | 109 |
-| NOT_SUPPORTED_IN_CLASS | 171 |
-| NUMBER_TOO_BIG | 161 |
 | OPTIMIZE | 1 |
-| POSIX_COLLATING_ELEMENTS_NOT_SUPPORTED | 131 |
-| POSIX_NAMED_CLASS_OUTSIDE_CLASS | 113 |
+| REPLACE | 2 |
+| MATCH | 3 |
+| INTERNAL | 4 |
+| STRAY_BACKSLASH | 101 |
+| MISSING_CONTROL_CHAR | 102 |
+| UNRECOGNIZED_ESCAPE | 103 |
 | QUANTIFIERS_OUT_OF_ORDER | 104 |
 | QUANTIFIER_TOO_BIG | 105 |
-| RANGE_OUT_OF_ORDER | 108 |
-| REPLACE | 2 |
-| SINGLE_BYTE_MATCH_IN_LOOKBEHIND | 136 |
-| STRAY_BACKSLASH | 101 |
-| SUBPATTERN_NAME_TOO_LONG | 148 |
-| TOO_MANY_BRANCHES_IN_DEFINE | 154 |
-| TOO_MANY_CONDITIONAL_BRANCHES | 127 |
-| TOO_MANY_FORWARD_REFERENCES | 172 |
-| TOO_MANY_SUBPATTERNS | 149 |
-| UNKNOWN_BACKTRACKING_CONTROL_VERB | 160 |
-| UNKNOWN_POSIX_CLASS_NAME | 130 |
-| UNKNOWN_PROPERTY | 147 |
-| UNMATCHED_PARENTHESIS | 114 |
-| UNRECOGNIZED_CHARACTER | 112 |
-| UNRECOGNIZED_ESCAPE | 103 |
 | UNTERMINATED_CHARACTER_CLASS | 106 |
+| INVALID_ESCAPE_IN_CHARACTER_CLASS | 107 |
+| RANGE_OUT_OF_ORDER | 108 |
+| NOTHING_TO_REPEAT | 109 |
+| UNRECOGNIZED_CHARACTER | 112 |
+| POSIX_NAMED_CLASS_OUTSIDE_CLASS | 113 |
+| UNMATCHED_PARENTHESIS | 114 |
+| INEXISTENT_SUBPATTERN_REFERENCE | 115 |
 | UNTERMINATED_COMMENT | 118 |
+| EXPRESSION_TOO_LARGE | 120 |
+| MEMORY_ERROR | 121 |
 | VARIABLE_LENGTH_LOOKBEHIND | 125 |
+| MALFORMED_CONDITION | 126 |
+| TOO_MANY_CONDITIONAL_BRANCHES | 127 |
+| ASSERTION_EXPECTED | 128 |
+| UNKNOWN_POSIX_CLASS_NAME | 130 |
+| POSIX_COLLATING_ELEMENTS_NOT_SUPPORTED | 131 |
+| HEX_CODE_TOO_LARGE | 134 |
+| INVALID_CONDITION | 135 |
+| SINGLE_BYTE_MATCH_IN_LOOKBEHIND | 136 |
+| INFINITE_LOOP | 140 |
+| MISSING_SUBPATTERN_NAME_TERMINATOR | 142 |
+| DUPLICATE_SUBPATTERN_NAME | 143 |
+| MALFORMED_PROPERTY | 146 |
+| UNKNOWN_PROPERTY | 147 |
+| SUBPATTERN_NAME_TOO_LONG | 148 |
+| TOO_MANY_SUBPATTERNS | 149 |
+| INVALID_OCTAL_VALUE | 151 |
+| TOO_MANY_BRANCHES_IN_DEFINE | 154 |
+| DEFINE_REPETION | 155 |
+| INCONSISTENT_NEWLINE_OPTIONS | 156 |
+| MISSING_BACK_REFERENCE | 157 |
+| INVALID_RELATIVE_REFERENCE | 158 |
+| BACKTRACKING_CONTROL_VERB_ARGUMENT_FORBIDDEN | 159 |
+| UNKNOWN_BACKTRACKING_CONTROL_VERB | 160 |
+| NUMBER_TOO_BIG | 161 |
+| MISSING_SUBPATTERN_NAME | 162 |
+| MISSING_DIGIT | 163 |
+| INVALID_DATA_CHARACTER | 164 |
+| EXTRA_SUBPATTERN_NAME | 165 |
+| BACKTRACKING_CONTROL_VERB_ARGUMENT_REQUIRED | 166 |
+| INVALID_CONTROL_CHAR | 168 |
+| MISSING_NAME | 169 |
+| NOT_SUPPORTED_IN_CLASS | 171 |
+| TOO_MANY_FORWARD_REFERENCES | 172 |
+| NAME_TOO_LONG | 175 |
+| CHARACTER_VALUE_TOO_LARGE | 176 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SeekType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | CUR | 0 |
-| END | 2 |
 | SET | 1 |
+| END | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ShellError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | BAD_QUOTING | 0 |
 | EMPTY_STRING | 1 |
 | FAILED | 2 |
@@ -493,88 +510,91 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## SliceConfig
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | ALWAYS_MALLOC | 1 |
 | BYPASS_MAGAZINES | 2 |
-| CHUNK_SIZES | 5 |
-| COLOR_INCREMENT | 4 |
-| CONTENTION_COUNTER | 6 |
 | WORKING_SET_MSECS | 3 |
+| COLOR_INCREMENT | 4 |
+| CHUNK_SIZES | 5 |
+| CONTENTION_COUNTER | 6 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SpawnError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| 2BIG | 5 |
-| ACCES | 3 |
-| CHDIR | 2 |
-| FAILED | 19 |
 | FORK | 0 |
-| INVAL | 16 |
-| IO | 13 |
-| ISDIR | 17 |
-| LIBBAD | 18 |
-| LOOP | 11 |
-| MFILE | 15 |
-| NAMETOOLONG | 7 |
-| NFILE | 14 |
-| NOENT | 8 |
+| READ | 1 |
+| CHDIR | 2 |
+| ACCES | 3 |
+| PERM | 4 |
+| TOO_BIG | 5 |
 | NOEXEC | 6 |
+| NAMETOOLONG | 7 |
+| NOENT | 8 |
 | NOMEM | 9 |
 | NOTDIR | 10 |
-| PERM | 4 |
-| READ | 1 |
-| TOO_BIG | 5 |
+| LOOP | 11 |
 | TXTBUSY | 12 |
+| IO | 13 |
+| NFILE | 14 |
+| MFILE | 15 |
+| INVAL | 16 |
+| ISDIR | 17 |
+| LIBBAD | 18 |
+| FAILED | 19 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TestFileType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BUILT | 1 |
 | DIST | 0 |
+| BUILT | 1 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TestLogType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| NONE | 0 |
 | ERROR | 1 |
+| START_BINARY | 2 |
 | LIST_CASE | 3 |
+| SKIP_CASE | 4 |
+| START_CASE | 5 |
+| STOP_CASE | 6 |
+| MIN_RESULT | 7 |
 | MAX_RESULT | 8 |
 | MESSAGE | 9 |
-| MIN_RESULT | 7 |
-| NONE | 0 |
-| SKIP_CASE | 4 |
-| START_BINARY | 2 |
-| START_CASE | 5 |
 | START_SUITE | 10 |
-| STOP_CASE | 6 |
 | STOP_SUITE | 11 |
 
 ### Other runtime attributes ‡
@@ -582,28 +602,30 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## TestResult
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| SUCCESS | 0 |
+| SKIPPED | 1 |
 | FAILURE | 2 |
 | INCOMPLETE | 3 |
-| SKIPPED | 1 |
-| SUCCESS | 0 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ThreadError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | THREAD_ERROR_AGAIN | 0 |
 
 ### Other runtime attributes ‡
@@ -611,14 +633,15 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## TimeType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| DAYLIGHT | 1 |
 | STANDARD | 0 |
+| DAYLIGHT | 1 |
 | UNIVERSAL | 2 |
 
 ### Other runtime attributes ‡
@@ -626,297 +649,300 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## TokenType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BINARY | 259 |
-| CHAR | 258 |
-| COMMA | 44 |
-| COMMENT_MULTI | 269 |
-| COMMENT_SINGLE | 268 |
 | EOF | 0 |
-| EQUAL_SIGN | 61 |
-| ERROR | 257 |
-| FLOAT | 263 |
-| HEX | 262 |
-| IDENTIFIER | 266 |
-| IDENTIFIER_NULL | 267 |
-| INT | 261 |
-| LEFT_BRACE | 91 |
-| LEFT_CURLY | 123 |
 | LEFT_PAREN | 40 |
-| NONE | 256 |
-| OCTAL | 260 |
-| RIGHT_BRACE | 93 |
-| RIGHT_CURLY | 125 |
 | RIGHT_PAREN | 41 |
+| COMMA | 44 |
+| EQUAL_SIGN | 61 |
+| LEFT_BRACE | 91 |
+| RIGHT_BRACE | 93 |
+| LEFT_CURLY | 123 |
+| RIGHT_CURLY | 125 |
+| NONE | 256 |
+| ERROR | 257 |
+| CHAR | 258 |
+| BINARY | 259 |
+| OCTAL | 260 |
+| INT | 261 |
+| HEX | 262 |
+| FLOAT | 263 |
 | STRING | 264 |
 | SYMBOL | 265 |
+| IDENTIFIER | 266 |
+| IDENTIFIER_NULL | 267 |
+| COMMENT_SINGLE | 268 |
+| COMMENT_MULTI | 269 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TraverseType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | IN_ORDER | 0 |
-| LEVEL_ORDER | 3 |
-| POST_ORDER | 2 |
 | PRE_ORDER | 1 |
+| POST_ORDER | 2 |
+| LEVEL_ORDER | 3 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## UnicodeBreakType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| MANDATORY | 0 |
+| CARRIAGE_RETURN | 1 |
+| LINE_FEED | 2 |
+| COMBINING_MARK | 3 |
+| SURROGATE | 4 |
+| ZERO_WIDTH_SPACE | 5 |
+| INSEPARABLE | 6 |
+| NON_BREAKING_GLUE | 7 |
+| CONTINGENT | 8 |
+| SPACE | 9 |
 | AFTER | 10 |
+| BEFORE | 11 |
+| BEFORE_AND_AFTER | 12 |
+| HYPHEN | 13 |
+| NON_STARTER | 14 |
+| OPEN_PUNCTUATION | 15 |
+| CLOSE_PUNCTUATION | 16 |
+| QUOTATION | 17 |
+| EXCLAMATION | 18 |
+| IDEOGRAPHIC | 19 |
+| NUMERIC | 20 |
+| INFIX_SEPARATOR | 21 |
+| SYMBOL | 22 |
+| ALPHABETIC | 23 |
+| PREFIX | 24 |
+| POSTFIX | 25 |
+| COMPLEX_CONTEXT | 26 |
+| AMBIGUOUS | 27 |
+| UNKNOWN | 28 |
+| NEXT_LINE | 29 |
+| WORD_JOINER | 30 |
+| HANGUL_L_JAMO | 31 |
+| HANGUL_V_JAMO | 32 |
+| HANGUL_T_JAMO | 33 |
+| HANGUL_LV_SYLLABLE | 34 |
+| HANGUL_LVT_SYLLABLE | 35 |
+| CLOSE_PARENTHESIS | 36 |
+| CONDITIONAL_JAPANESE_STARTER | 37 |
+| HEBREW_LETTER | 38 |
+| REGIONAL_INDICATOR | 39 |
+| EMOJI_BASE | 40 |
+| EMOJI_MODIFIER | 41 |
+| ZERO_WIDTH_JOINER | 42 |
 | AKSARA | 43 |
 | AKSARA_PRE_BASE | 44 |
 | AKSARA_START | 45 |
-| ALPHABETIC | 23 |
-| AMBIGUOUS | 27 |
-| BEFORE | 11 |
-| BEFORE_AND_AFTER | 12 |
-| CARRIAGE_RETURN | 1 |
-| CLOSE_PARANTHESIS | 36 |
-| CLOSE_PARENTHESIS | 36 |
-| CLOSE_PUNCTUATION | 16 |
-| COMBINING_MARK | 3 |
-| COMPLEX_CONTEXT | 26 |
-| CONDITIONAL_JAPANESE_STARTER | 37 |
-| CONTINGENT | 8 |
-| EMOJI_BASE | 40 |
-| EMOJI_MODIFIER | 41 |
-| EXCLAMATION | 18 |
-| HANGUL_LVT_SYLLABLE | 35 |
-| HANGUL_LV_SYLLABLE | 34 |
-| HANGUL_L_JAMO | 31 |
-| HANGUL_T_JAMO | 33 |
-| HANGUL_V_JAMO | 32 |
-| HEBREW_LETTER | 38 |
-| HYPHEN | 13 |
-| IDEOGRAPHIC | 19 |
-| INFIX_SEPARATOR | 21 |
-| INSEPARABLE | 6 |
-| LINE_FEED | 2 |
-| MANDATORY | 0 |
-| NEXT_LINE | 29 |
-| NON_BREAKING_GLUE | 7 |
-| NON_STARTER | 14 |
-| NUMERIC | 20 |
-| OPEN_PUNCTUATION | 15 |
-| POSTFIX | 25 |
-| PREFIX | 24 |
-| QUOTATION | 17 |
-| REGIONAL_INDICATOR | 39 |
-| SPACE | 9 |
-| SURROGATE | 4 |
-| SYMBOL | 22 |
-| UNKNOWN | 28 |
-| VIRAMA | 47 |
 | VIRAMA_FINAL | 46 |
-| WORD_JOINER | 30 |
-| ZERO_WIDTH_JOINER | 42 |
-| ZERO_WIDTH_SPACE | 5 |
+| VIRAMA | 47 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## UnicodeScript
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ADLAM | 132 |
-| AHOM | 126 |
-| ANATOLIAN_HIEROGLYPHS | 127 |
+| INVALID_CODE | -1 |
+| COMMON | 0 |
+| INHERITED | 1 |
 | ARABIC | 2 |
 | ARMENIAN | 3 |
-| AVESTAN | 78 |
-| BALINESE | 62 |
-| BAMUM | 79 |
-| BASSA_VAH | 103 |
-| BATAK | 93 |
 | BENGALI | 4 |
-| BHAIKSUKI | 133 |
 | BOPOMOFO | 5 |
-| BRAHMI | 94 |
-| BRAILLE | 46 |
-| BUGINESE | 55 |
-| BUHID | 44 |
-| CANADIAN_ABORIGINAL | 40 |
-| CARIAN | 75 |
-| CAUCASIAN_ALBANIAN | 104 |
-| CHAKMA | 96 |
-| CHAM | 72 |
 | CHEROKEE | 6 |
-| CHORASMIAN | 153 |
-| COMMON | 0 |
 | COPTIC | 7 |
-| CUNEIFORM | 63 |
-| CYPRIOT | 47 |
-| CYPRO_MINOAN | 157 |
 | CYRILLIC | 8 |
 | DESERET | 9 |
 | DEVANAGARI | 10 |
-| DIVES_AKURU | 154 |
-| DOGRA | 142 |
-| DUPLOYAN | 105 |
-| EGYPTIAN_HIEROGLYPHS | 80 |
-| ELBASAN | 106 |
-| ELYMAIC | 149 |
 | ETHIOPIC | 11 |
-| GARAY | 166 |
 | GEORGIAN | 12 |
-| GLAGOLITIC | 56 |
 | GOTHIC | 13 |
-| GRANTHA | 107 |
 | GREEK | 14 |
 | GUJARATI | 15 |
-| GUNJALA_GONDI | 143 |
 | GURMUKHI | 16 |
-| GURUNG_KHEMA | 169 |
 | HAN | 17 |
 | HANGUL | 18 |
-| HANIFI_ROHINGYA | 144 |
-| HANUNOO | 43 |
-| HATRAN | 128 |
 | HEBREW | 19 |
 | HIRAGANA | 20 |
-| IMPERIAL_ARAMAIC | 81 |
-| INHERITED | 1 |
-| INSCRIPTIONAL_PAHLAVI | 82 |
-| INSCRIPTIONAL_PARTHIAN | 83 |
-| INVALID_CODE | -1 |
-| JAVANESE | 84 |
-| KAITHI | 85 |
 | KANNADA | 21 |
 | KATAKANA | 22 |
-| KAWI | 163 |
-| KAYAH_LI | 67 |
-| KHAROSHTHI | 60 |
-| KHITAN_SMALL_SCRIPT | 155 |
 | KHMER | 23 |
-| KHOJKI | 108 |
-| KHUDAWADI | 109 |
-| KIRAT_RAI | 170 |
 | LAO | 24 |
 | LATIN | 25 |
-| LEPCHA | 68 |
-| LIMBU | 48 |
-| LINEAR_A | 110 |
-| LINEAR_B | 51 |
-| LISU | 86 |
-| LYCIAN | 76 |
-| LYDIAN | 77 |
-| MAHAJANI | 111 |
-| MAKASAR | 145 |
 | MALAYALAM | 26 |
-| MANDAIC | 95 |
-| MANICHAEAN | 112 |
-| MARCHEN | 134 |
-| MASARAM_GONDI | 138 |
-| MATH | 162 |
-| MEDEFAIDRIN | 146 |
-| MEETEI_MAYEK | 87 |
-| MENDE_KIKAKUI | 113 |
-| MEROITIC_CURSIVE | 97 |
-| MEROITIC_HIEROGLYPHS | 98 |
-| MIAO | 99 |
-| MODI | 114 |
 | MONGOLIAN | 27 |
-| MRO | 115 |
-| MULTANI | 129 |
 | MYANMAR | 28 |
-| NABATAEAN | 116 |
-| NAG_MUNDARI | 164 |
-| NANDINAGARI | 150 |
-| NEWA | 135 |
-| NEW_TAI_LUE | 54 |
-| NKO | 66 |
-| NUSHU | 139 |
-| NYIAKENG_PUACHUE_HMONG | 151 |
 | OGHAM | 29 |
-| OLD_HUNGARIAN | 130 |
 | OLD_ITALIC | 30 |
-| OLD_NORTH_ARABIAN | 117 |
-| OLD_PERMIC | 118 |
-| OLD_PERSIAN | 59 |
-| OLD_SOGDIAN | 147 |
-| OLD_SOUTH_ARABIAN | 88 |
-| OLD_TURKIC | 89 |
-| OLD_UYGHUR | 158 |
-| OL_CHIKI | 73 |
-| OL_ONAL | 171 |
 | ORIYA | 31 |
-| OSAGE | 136 |
-| OSMANYA | 49 |
-| PAHAWH_HMONG | 119 |
-| PALMYRENE | 120 |
-| PAU_CIN_HAU | 121 |
-| PHAGS_PA | 65 |
-| PHOENICIAN | 64 |
-| PSALTER_PAHLAVI | 122 |
-| REJANG | 69 |
 | RUNIC | 32 |
-| SAMARITAN | 90 |
-| SAURASHTRA | 71 |
-| SHARADA | 100 |
-| SHAVIAN | 50 |
-| SIDDHAM | 123 |
-| SIGNWRITING | 131 |
 | SINHALA | 33 |
-| SOGDIAN | 148 |
-| SORA_SOMPENG | 101 |
-| SOYOMBO | 140 |
-| SUNDANESE | 70 |
-| SUNUWAR | 168 |
-| SYLOTI_NAGRI | 58 |
 | SYRIAC | 34 |
-| TAGALOG | 42 |
-| TAGBANWA | 45 |
-| TAI_LE | 52 |
-| TAI_THAM | 91 |
-| TAI_VIET | 92 |
-| TAKRI | 102 |
 | TAMIL | 35 |
-| TANGSA | 159 |
-| TANGUT | 137 |
 | TELUGU | 36 |
 | THAANA | 37 |
 | THAI | 38 |
 | TIBETAN | 39 |
-| TIFINAGH | 57 |
-| TIRHUTA | 124 |
-| TODHRI | 165 |
-| TOTO | 160 |
-| TULU_TIGALARI | 167 |
-| UGARITIC | 53 |
-| UNKNOWN | 61 |
-| VAI | 74 |
-| VITHKUQI | 161 |
-| WANCHO | 152 |
-| WARANG_CITI | 125 |
-| YEZIDI | 156 |
+| CANADIAN_ABORIGINAL | 40 |
 | YI | 41 |
+| TAGALOG | 42 |
+| HANUNOO | 43 |
+| BUHID | 44 |
+| TAGBANWA | 45 |
+| BRAILLE | 46 |
+| CYPRIOT | 47 |
+| LIMBU | 48 |
+| OSMANYA | 49 |
+| SHAVIAN | 50 |
+| LINEAR_B | 51 |
+| TAI_LE | 52 |
+| UGARITIC | 53 |
+| NEW_TAI_LUE | 54 |
+| BUGINESE | 55 |
+| GLAGOLITIC | 56 |
+| TIFINAGH | 57 |
+| SYLOTI_NAGRI | 58 |
+| OLD_PERSIAN | 59 |
+| KHAROSHTHI | 60 |
+| UNKNOWN | 61 |
+| BALINESE | 62 |
+| CUNEIFORM | 63 |
+| PHOENICIAN | 64 |
+| PHAGS_PA | 65 |
+| NKO | 66 |
+| KAYAH_LI | 67 |
+| LEPCHA | 68 |
+| REJANG | 69 |
+| SUNDANESE | 70 |
+| SAURASHTRA | 71 |
+| CHAM | 72 |
+| OL_CHIKI | 73 |
+| VAI | 74 |
+| CARIAN | 75 |
+| LYCIAN | 76 |
+| LYDIAN | 77 |
+| AVESTAN | 78 |
+| BAMUM | 79 |
+| EGYPTIAN_HIEROGLYPHS | 80 |
+| IMPERIAL_ARAMAIC | 81 |
+| INSCRIPTIONAL_PAHLAVI | 82 |
+| INSCRIPTIONAL_PARTHIAN | 83 |
+| JAVANESE | 84 |
+| KAITHI | 85 |
+| LISU | 86 |
+| MEETEI_MAYEK | 87 |
+| OLD_SOUTH_ARABIAN | 88 |
+| OLD_TURKIC | 89 |
+| SAMARITAN | 90 |
+| TAI_THAM | 91 |
+| TAI_VIET | 92 |
+| BATAK | 93 |
+| BRAHMI | 94 |
+| MANDAIC | 95 |
+| CHAKMA | 96 |
+| MEROITIC_CURSIVE | 97 |
+| MEROITIC_HIEROGLYPHS | 98 |
+| MIAO | 99 |
+| SHARADA | 100 |
+| SORA_SOMPENG | 101 |
+| TAKRI | 102 |
+| BASSA_VAH | 103 |
+| CAUCASIAN_ALBANIAN | 104 |
+| DUPLOYAN | 105 |
+| ELBASAN | 106 |
+| GRANTHA | 107 |
+| KHOJKI | 108 |
+| KHUDAWADI | 109 |
+| LINEAR_A | 110 |
+| MAHAJANI | 111 |
+| MANICHAEAN | 112 |
+| MENDE_KIKAKUI | 113 |
+| MODI | 114 |
+| MRO | 115 |
+| NABATAEAN | 116 |
+| OLD_NORTH_ARABIAN | 117 |
+| OLD_PERMIC | 118 |
+| PAHAWH_HMONG | 119 |
+| PALMYRENE | 120 |
+| PAU_CIN_HAU | 121 |
+| PSALTER_PAHLAVI | 122 |
+| SIDDHAM | 123 |
+| TIRHUTA | 124 |
+| WARANG_CITI | 125 |
+| AHOM | 126 |
+| ANATOLIAN_HIEROGLYPHS | 127 |
+| HATRAN | 128 |
+| MULTANI | 129 |
+| OLD_HUNGARIAN | 130 |
+| SIGNWRITING | 131 |
+| ADLAM | 132 |
+| BHAIKSUKI | 133 |
+| MARCHEN | 134 |
+| NEWA | 135 |
+| OSAGE | 136 |
+| TANGUT | 137 |
+| MASARAM_GONDI | 138 |
+| NUSHU | 139 |
+| SOYOMBO | 140 |
 | ZANABAZAR_SQUARE | 141 |
+| DOGRA | 142 |
+| GUNJALA_GONDI | 143 |
+| HANIFI_ROHINGYA | 144 |
+| MAKASAR | 145 |
+| MEDEFAIDRIN | 146 |
+| OLD_SOGDIAN | 147 |
+| SOGDIAN | 148 |
+| ELYMAIC | 149 |
+| NANDINAGARI | 150 |
+| NYIAKENG_PUACHUE_HMONG | 151 |
+| WANCHO | 152 |
+| CHORASMIAN | 153 |
+| DIVES_AKURU | 154 |
+| KHITAN_SMALL_SCRIPT | 155 |
+| YEZIDI | 156 |
+| CYPRO_MINOAN | 157 |
+| OLD_UYGHUR | 158 |
+| TANGSA | 159 |
+| TOTO | 160 |
+| VITHKUQI | 161 |
+| MATH | 162 |
+| KAWI | 163 |
+| NAG_MUNDARI | 164 |
+| TODHRI | 165 |
+| GARAY | 166 |
+| TULU_TIGALARI | 167 |
+| SUNUWAR | 168 |
+| GURUNG_KHEMA | 169 |
+| KIRAT_RAI | 170 |
+| OL_ONAL | 171 |
 
 ### Other runtime attributes ‡
 
@@ -950,54 +976,56 @@ title: GLib.enums
   - to_iso15924(script:GLib.UnicodeScript) -> int
 
 
+<br>
 ## UnicodeType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CLOSE_PUNCTUATION | 18 |
-| CONNECT_PUNCTUATION | 16 |
 | CONTROL | 0 |
-| CURRENCY_SYMBOL | 23 |
-| DASH_PUNCTUATION | 17 |
-| DECIMAL_NUMBER | 13 |
-| ENCLOSING_MARK | 11 |
-| FINAL_PUNCTUATION | 19 |
 | FORMAT | 1 |
-| INITIAL_PUNCTUATION | 20 |
-| LETTER_NUMBER | 14 |
-| LINE_SEPARATOR | 27 |
-| LOWERCASE_LETTER | 5 |
-| MATH_SYMBOL | 25 |
-| MODIFIER_LETTER | 6 |
-| MODIFIER_SYMBOL | 24 |
-| NON_SPACING_MARK | 12 |
-| OPEN_PUNCTUATION | 22 |
-| OTHER_LETTER | 7 |
-| OTHER_NUMBER | 15 |
-| OTHER_PUNCTUATION | 21 |
-| OTHER_SYMBOL | 26 |
-| PARAGRAPH_SEPARATOR | 28 |
-| PRIVATE_USE | 3 |
-| SPACE_SEPARATOR | 29 |
-| SPACING_MARK | 10 |
-| SURROGATE | 4 |
-| TITLECASE_LETTER | 8 |
 | UNASSIGNED | 2 |
+| PRIVATE_USE | 3 |
+| SURROGATE | 4 |
+| LOWERCASE_LETTER | 5 |
+| MODIFIER_LETTER | 6 |
+| OTHER_LETTER | 7 |
+| TITLECASE_LETTER | 8 |
 | UPPERCASE_LETTER | 9 |
+| SPACING_MARK | 10 |
+| ENCLOSING_MARK | 11 |
+| NON_SPACING_MARK | 12 |
+| DECIMAL_NUMBER | 13 |
+| LETTER_NUMBER | 14 |
+| OTHER_NUMBER | 15 |
+| CONNECT_PUNCTUATION | 16 |
+| DASH_PUNCTUATION | 17 |
+| CLOSE_PUNCTUATION | 18 |
+| FINAL_PUNCTUATION | 19 |
+| INITIAL_PUNCTUATION | 20 |
+| OTHER_PUNCTUATION | 21 |
+| OPEN_PUNCTUATION | 22 |
+| CURRENCY_SYMBOL | 23 |
+| MODIFIER_SYMBOL | 24 |
+| MATH_SYMBOL | 25 |
+| OTHER_SYMBOL | 26 |
+| LINE_SEPARATOR | 27 |
+| PARAGRAPH_SEPARATOR | 28 |
+| SPACE_SEPARATOR | 29 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## UnixPipeEnd
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | READ | 0 |
 | WRITE | 1 |
 
@@ -1006,34 +1034,36 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## UriError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BAD_AUTH_PARAMS | 4 |
-| BAD_FRAGMENT | 9 |
-| BAD_HOST | 5 |
-| BAD_PASSWORD | 3 |
-| BAD_PATH | 7 |
-| BAD_PORT | 6 |
-| BAD_QUERY | 8 |
+| FAILED | 0 |
 | BAD_SCHEME | 1 |
 | BAD_USER | 2 |
-| FAILED | 0 |
+| BAD_PASSWORD | 3 |
+| BAD_AUTH_PARAMS | 4 |
+| BAD_HOST | 5 |
+| BAD_PORT | 6 |
+| BAD_PATH | 7 |
+| BAD_QUERY | 8 |
+| BAD_FRAGMENT | 9 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## UserDirectory
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | DIRECTORY_DESKTOP | 0 |
 | DIRECTORY_DOCUMENTS | 1 |
 | DIRECTORY_DOWNLOAD | 2 |
@@ -1049,46 +1079,48 @@ title: GLib.enums
 
 ### Runtime functions †
 
+<br>
 ## VariantClass
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| TUPLE | 40 |
 | ARRAY | 97 |
 | BOOLEAN | 98 |
+| DOUBLE | 100 |
+| SIGNATURE | 103 |
+| HANDLE | 104 |
+| INT32 | 105 |
+| MAYBE | 109 |
+| INT16 | 110 |
+| OBJECT_PATH | 111 |
+| UINT16 | 113 |
+| STRING | 115 |
+| UINT64 | 116 |
+| UINT32 | 117 |
+| VARIANT | 118 |
+| INT64 | 120 |
 | BYTE | 121 |
 | DICT_ENTRY | 123 |
-| DOUBLE | 100 |
-| HANDLE | 104 |
-| INT16 | 110 |
-| INT32 | 105 |
-| INT64 | 120 |
-| MAYBE | 109 |
-| OBJECT_PATH | 111 |
-| SIGNATURE | 103 |
-| STRING | 115 |
-| TUPLE | 40 |
-| UINT16 | 113 |
-| UINT32 | 117 |
-| UINT64 | 116 |
-| VARIANT | 118 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## VariantParseError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| FAILED | 0 |
 | BASIC_TYPE_EXPECTED | 1 |
 | CANNOT_INFER_TYPE | 2 |
 | DEFINITE_TYPE_EXPECTED | 3 |
-| FAILED | 0 |
 | INPUT_NOT_AT_END | 4 |
 | INVALID_CHARACTER | 5 |
 | INVALID_FORMAT_STRING | 6 |
@@ -1098,14 +1130,16 @@ title: GLib.enums
 | NO_COMMON_TYPE | 10 |
 | NUMBER_OUT_OF_RANGE | 11 |
 | NUMBER_TOO_BIG | 12 |
-| RECURSION | 18 |
 | TYPE_ERROR | 13 |
 | UNEXPECTED_TOKEN | 14 |
 | UNKNOWN_KEYWORD | 15 |
 | UNTERMINATED_STRING_CONSTANT | 16 |
 | VALUE_EXPECTED | 17 |
+| RECURSION | 18 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
+
+<br>

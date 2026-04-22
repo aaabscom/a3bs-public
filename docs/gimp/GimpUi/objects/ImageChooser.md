@@ -4,13 +4,11 @@ title: GimpUi.objects
 ---
 # GimpUi.objects
 
-## VectorLoadProcedureDialog
-- :Constructors:<br /><br />::<br /><br />    VectorLoadProcedureDialog(**properties)<br />    new(procedure:Gimp.VectorLoadProcedure, config:Gimp.ProcedureConfig, extracted_data:Gimp.VectorLoadData=None, file:Gio.File=None) -> Gtk.Widget
+## ImageChooser
+- :Constructors:<br /><br />::<br /><br />    ImageChooser(**properties)<br />    new(title:str=None, label:str=None, image:Gimp.Image=None) -> Gtk.Widget
 
 ### Runtime attributes
 
-- **action_area**
-- **bin**
 - **container**
 - **g_type_instance**
 - **parent_instance**
@@ -18,40 +16,17 @@ title: GimpUi.objects
 - **props**
 - **qdata**
 - **ref_count**
-- **vbox**
 - **widget**
-- **window**
 
 ### Runtime functions
 - **activate**`(*args, **kwargs)`
   - activate(self) -> bool
 
-- **activate_default**`(*args, **kwargs)`
-  - activate_default(self) -> bool
-
-- **activate_focus**`(*args, **kwargs)`
-  - activate_focus(self) -> bool
-
-- **activate_key**`(*args, **kwargs)`
-  - activate_key(self, event:Gdk.EventKey) -> bool
-
 - **add**`(*args, **kwargs)`
   - add(self, widget:Gtk.Widget)
 
-- **add_accel_group**`(*args, **kwargs)`
-  - add_accel_group(self, accel_group:Gtk.AccelGroup)
-
 - **add_accelerator**`(*args, **kwargs)`
   - add_accelerator(self, accel_signal:str, accel_group:Gtk.AccelGroup, accel_key:int, accel_mods:Gdk.ModifierType, accel_flags:Gtk.AccelFlags)
-
-- **add_action_widget**`(*args, **kwargs)`
-  - add_action_widget(self, child:Gtk.Widget, response_id:int)
-
-- **add_button**`(*args, **kwargs)`
-  - add_button(self, button_text:str, response_id:int) -> Gtk.Widget
-
-- **add_buttons**`(self, *args)`
-  - The add_buttons() method adds several buttons to the Gtk.Dialog using<br />the button data passed as arguments to the method. This method is the<br />same as calling the Gtk.Dialog.add_button() repeatedly. The button data<br />pairs - button text (or stock ID) and a response ID integer are passed<br />individually. For example:<br /><br />.. code-block:: python<br /><br />    dialog.add_buttons(Gtk.STOCK_OPEN, 42, "Close", Gtk.ResponseType.CLOSE)<br /><br />will add "Open" and "Close" buttons to dialog.
 
 - **add_child**`(*args, **kwargs)`
   - add_child(self, builder:Gtk.Builder, child:GObject.Object, type:str=None)
@@ -62,20 +37,11 @@ title: GimpUi.objects
 - **add_events**`(*args, **kwargs)`
   - add_events(self, events:int)
 
-- **add_mnemonic**`(*args, **kwargs)`
-  - add_mnemonic(self, keyval:int, target:Gtk.Widget)
-
 - **add_mnemonic_label**`(*args, **kwargs)`
   - add_mnemonic_label(self, label:Gtk.Widget)
 
 - **add_tick_callback**`(*args, **kwargs)`
   - add_tick_callback(self, callback:Gtk.TickCallback, user_data=None) -> int
-
-- **begin_move_drag**`(*args, **kwargs)`
-  - begin_move_drag(self, button:int, root_x:int, root_y:int, timestamp:int)
-
-- **begin_resize_drag**`(*args, **kwargs)`
-  - begin_resize_drag(self, edge:Gdk.WindowEdge, button:int, root_x:int, root_y:int, timestamp:int)
 
 - **bind_property**`(bound native)`
   - documentation unavailable
@@ -125,9 +91,6 @@ title: GimpUi.objects
 - **class_path**`(*args, **kwargs)`
   - class_path(self) -> path_length:int, path:str, path_reversed:str
 
-- **close**`(*args, **kwargs)`
-  - close(self)
-
 - **compat_control**`(self, *args, **kargs)`
   - documentation unavailable
 
@@ -167,9 +130,6 @@ title: GimpUi.objects
 - **custom_tag_start**`(*args, **kwargs)`
   - custom_tag_start(self, builder:Gtk.Builder, child:GObject.Object=None, tagname:str) -> bool, parser:GLib.MarkupParser, data
 
-- **deiconify**`(*args, **kwargs)`
-  - deiconify(self)
-
 - **destroy**`(*args, **kwargs)`
   - destroy(self)
 
@@ -184,12 +144,6 @@ title: GimpUi.objects
 
 - **disconnect_by_func**`(bound native)`
   - documentation unavailable
-
-- **do_activate_default**`(bound native)`
-  - activate_default(self)
-
-- **do_activate_focus**`(bound native)`
-  - activate_focus(self)
 
 - **do_add**`(bound native)`
   - add(self, widget:Gtk.Widget)
@@ -223,9 +177,6 @@ title: GimpUi.objects
 
 - **do_child_type**`(bound native)`
   - child_type(self) -> GType
-
-- **do_close**`(bound native)`
-  - close(self)
 
 - **do_composite_name**`(bound native)`
   - composite_name(self, child:Gtk.Widget) -> str
@@ -287,20 +238,11 @@ title: GimpUi.objects
 - **do_draw**`(bound native)`
   - draw(self, cr:cairo.Context) -> bool
 
-- **do_enable_debugging**`(bound native)`
-  - enable_debugging(self, toggle:bool) -> bool
-
 - **do_enter_notify_event**`(bound native)`
   - enter_notify_event(self, event:Gdk.EventCrossing) -> bool
 
 - **do_event**`(bound native)`
   - event(self, event:Gdk.Event) -> bool
-
-- **do_fill_end**`(bound native)`
-  - fill_end(self, procedure:Gimp.Procedure, config:Gimp.ProcedureConfig)
-
-- **do_fill_start**`(bound native)`
-  - fill_start(self, procedure:Gimp.Procedure, config:Gimp.ProcedureConfig)
 
 - **do_focus**`(bound native)`
   - focus(self, direction:Gtk.DirectionType) -> bool
@@ -365,9 +307,6 @@ title: GimpUi.objects
 - **do_keynav_failed**`(bound native)`
   - keynav_failed(self, direction:Gtk.DirectionType) -> bool
 
-- **do_keys_changed**`(bound native)`
-  - keys_changed(self)
-
 - **do_leave_notify_event**`(bound native)`
   - leave_notify_event(self, event:Gdk.EventCrossing) -> bool
 
@@ -413,9 +352,6 @@ title: GimpUi.objects
 - **do_remove**`(bound native)`
   - remove(self, widget:Gtk.Widget)
 
-- **do_response**`(bound native)`
-  - response(self, response_id:int)
-
 - **do_screen_changed**`(bound native)`
   - screen_changed(self, previous_screen:Gdk.Screen)
 
@@ -439,9 +375,6 @@ title: GimpUi.objects
 
 - **do_set_child_property**`(bound native)`
   - set_child_property(self, child:Gtk.Widget, property_id:int, value:GObject.Value, pspec:GObject.ParamSpec)
-
-- **do_set_focus**`(bound native)`
-  - set_focus(self, focus:Gtk.Widget=None)
 
 - **do_set_focus_child**`(bound native)`
   - set_focus_child(self, child:Gtk.Widget=None)
@@ -590,30 +523,6 @@ title: GimpUi.objects
 - **event**`(*args, **kwargs)`
   - event(self, event:Gdk.Event) -> bool
 
-- **fill**`(*args, **kwargs)`
-  - fill(self, properties:list=None)
-
-- **fill_box**`(*args, **kwargs)`
-  - fill_box(self, container_id:str, properties:list=None) -> Gtk.Widget
-
-- **fill_expander**`(*args, **kwargs)`
-  - fill_expander(self, container_id:str, title_id:str=None, invert_title:bool, contents_id:str=None) -> Gtk.Widget
-
-- **fill_flowbox**`(*args, **kwargs)`
-  - fill_flowbox(self, container_id:str, properties:list=None) -> Gtk.Widget
-
-- **fill_frame**`(*args, **kwargs)`
-  - fill_frame(self, container_id:str, title_id:str=None, invert_title:bool, contents_id:str=None) -> Gtk.Widget
-
-- **fill_notebook**`(*args, **kwargs)`
-  - fill_notebook(self, container_id:str, label_list:list, page_list:list) -> Gtk.Widget
-
-- **fill_paned**`(*args, **kwargs)`
-  - fill_paned(self, container_id:str, orientation:Gtk.Orientation, child1_id:str=None, child2_id:str=None) -> Gtk.Widget
-
-- **fill_scrolled_window**`(*args, **kwargs)`
-  - fill_scrolled_window(self, container_id:str, contents_id:str) -> Gtk.Widget
-
 - **find_child_property**`(*args, **kwargs)`
   - find_child_property(self, property_name:str) -> GObject.ParamSpec or None
 
@@ -638,20 +547,8 @@ title: GimpUi.objects
 - **freeze_notify**`(self)`
   - Freezes the object's property-changed notification queue.<br /><br />:returns:<br />    A context manager which optionally can be used to<br />    automatically thaw notifications.<br /><br />This will freeze the object so that "notify" signals are blocked until<br />the thaw_notify() method is called.<br /><br />.. code-block:: python<br /><br />    with obj.freeze_notify():<br />        pass
 
-- **fullscreen**`(*args, **kwargs)`
-  - fullscreen(self)
-
-- **fullscreen_on_monitor**`(*args, **kwargs)`
-  - fullscreen_on_monitor(self, screen:Gdk.Screen, monitor:int)
-
-- **get_accept_focus**`(*args, **kwargs)`
-  - get_accept_focus(self) -> bool
-
 - **get_accessible**`(*args, **kwargs)`
   - get_accessible(self) -> Atk.Object
-
-- **get_action_area**`(*args, **kwargs)`
-  - get_action_area(self) -> Gtk.Box
 
 - **get_action_group**`(*args, **kwargs)`
   - get_action_group(self, prefix:str) -> Gio.ActionGroup or None
@@ -677,11 +574,8 @@ title: GimpUi.objects
 - **get_app_paintable**`(*args, **kwargs)`
   - get_app_paintable(self) -> bool
 
-- **get_application**`(*args, **kwargs)`
-  - get_application(self) -> Gtk.Application or None
-
-- **get_attached_to**`(*args, **kwargs)`
-  - get_attached_to(self) -> Gtk.Widget or None
+- **get_baseline_position**`(*args, **kwargs)`
+  - get_baseline_position(self) -> Gtk.BaselinePosition
 
 - **get_border_width**`(*args, **kwargs)`
   - get_border_width(self) -> int
@@ -692,8 +586,8 @@ title: GimpUi.objects
 - **get_can_focus**`(*args, **kwargs)`
   - get_can_focus(self) -> bool
 
-- **get_child**`(*args, **kwargs)`
-  - get_child(self) -> Gtk.Widget or None
+- **get_center_widget**`(*args, **kwargs)`
+  - get_center_widget(self) -> Gtk.Widget or None
 
 - **get_child_requisition**`(*args, **kwargs)`
   - get_child_requisition(self) -> requisition:Gtk.Requisition
@@ -710,17 +604,8 @@ title: GimpUi.objects
 - **get_clipboard**`(*args, **kwargs)`
   - get_clipboard(self, selection:Gdk.Atom) -> Gtk.Clipboard
 
-- **get_color_widget**`(*args, **kwargs)`
-  - get_color_widget(self, property:str, editable:bool, type:GimpUi.ColorAreaType) -> Gtk.Widget
-
 - **get_composite_name**`(*args, **kwargs)`
   - get_composite_name(self) -> str
-
-- **get_content_area**`(*args, **kwargs)`
-  - get_content_area(self) -> Gtk.Box
-
-- **get_coordinates**`(*args, **kwargs)`
-  - get_coordinates(self, coordinates_id:str, x_property:str, y_property:str, unit_property:str, unit_format:str, update_policy:GimpUi.SizeEntryUpdatePolicy, x_resolution:float, y_resolution:float) -> Gtk.Widget
 
 - **get_css_name**`(*args, **kwargs)`
   - get_css_name(self) -> str
@@ -728,32 +613,11 @@ title: GimpUi.objects
 - **get_data**`(self, *args, **kargs)`
   - documentation unavailable
 
-- **get_decorated**`(*args, **kwargs)`
-  - get_decorated(self) -> bool
-
 - **get_default_direction**`(*args, **kwargs)`
   - get_default_direction() -> Gtk.TextDirection
 
-- **get_default_icon_list**`(*args, **kwargs)`
-  - get_default_icon_list() -> list
-
-- **get_default_icon_name**`(*args, **kwargs)`
-  - get_default_icon_name() -> str
-
-- **get_default_size**`(*args, **kwargs)`
-  - get_default_size(self) -> width:int, height:int
-
 - **get_default_style**`(*args, **kwargs)`
   - get_default_style() -> Gtk.Style
-
-- **get_default_widget**`(*args, **kwargs)`
-  - get_default_widget(self) -> Gtk.Widget or None
-
-- **get_deletable**`(*args, **kwargs)`
-  - get_deletable(self) -> bool
-
-- **get_destroy_with_parent**`(*args, **kwargs)`
-  - get_destroy_with_parent(self) -> bool
 
 - **get_device_enabled**`(*args, **kwargs)`
   - get_device_enabled(self, device:Gdk.Device) -> bool
@@ -770,14 +634,8 @@ title: GimpUi.objects
 - **get_double_buffered**`(*args, **kwargs)`
   - get_double_buffered(self) -> bool
 
-- **get_drawable_preview**`(*args, **kwargs)`
-  - get_drawable_preview(self, preview_id:str, drawable:Gimp.Drawable) -> Gtk.Widget
-
 - **get_events**`(*args, **kwargs)`
   - get_events(self) -> int
-
-- **get_focus**`(*args, **kwargs)`
-  - get_focus(self) -> Gtk.Widget or None
 
 - **get_focus_chain**`(*args, **kwargs)`
   - get_focus_chain(self) -> bool, focusable_widgets:list
@@ -791,14 +649,8 @@ title: GimpUi.objects
 - **get_focus_on_click**`(*args, **kwargs)`
   - get_focus_on_click(self) -> bool
 
-- **get_focus_on_map**`(*args, **kwargs)`
-  - get_focus_on_map(self) -> bool
-
 - **get_focus_vadjustment**`(*args, **kwargs)`
   - get_focus_vadjustment(self) -> Gtk.Adjustment or None
-
-- **get_focus_visible**`(*args, **kwargs)`
-  - get_focus_visible(self) -> bool
 
 - **get_font_map**`(*args, **kwargs)`
   - get_font_map(self) -> Pango.FontMap or None
@@ -809,17 +661,8 @@ title: GimpUi.objects
 - **get_frame_clock**`(*args, **kwargs)`
   - get_frame_clock(self) -> Gdk.FrameClock or None
 
-- **get_gravity**`(*args, **kwargs)`
-  - get_gravity(self) -> Gdk.Gravity
-
-- **get_group**`(*args, **kwargs)`
-  - get_group(self) -> Gtk.WindowGroup
-
 - **get_halign**`(*args, **kwargs)`
   - get_halign(self) -> Gtk.Align
-
-- **get_has_resize_grip**`(*args, **kwargs)`
-  - get_has_resize_grip(self) -> bool
 
 - **get_has_tooltip**`(*args, **kwargs)`
   - get_has_tooltip(self) -> bool
@@ -827,38 +670,23 @@ title: GimpUi.objects
 - **get_has_window**`(*args, **kwargs)`
   - get_has_window(self) -> bool
 
-- **get_header_bar**`(*args, **kwargs)`
-  - get_header_bar(self) -> Gtk.HeaderBar
-
 - **get_hexpand**`(*args, **kwargs)`
   - get_hexpand(self) -> bool
 
 - **get_hexpand_set**`(*args, **kwargs)`
   - get_hexpand_set(self) -> bool
 
-- **get_hide_titlebar_when_maximized**`(*args, **kwargs)`
-  - get_hide_titlebar_when_maximized(self) -> bool
+- **get_homogeneous**`(*args, **kwargs)`
+  - get_homogeneous(self) -> bool
 
-- **get_icon**`(*args, **kwargs)`
-  - get_icon(self) -> GdkPixbuf.Pixbuf or None
-
-- **get_icon_list**`(*args, **kwargs)`
-  - get_icon_list(self) -> list
-
-- **get_icon_name**`(*args, **kwargs)`
-  - get_icon_name(self) -> str or None
-
-- **get_int_combo**`(*args, **kwargs)`
-  - get_int_combo(self, property:str, store:GimpUi.IntStore) -> Gtk.Widget
-
-- **get_int_radio**`(*args, **kwargs)`
-  - get_int_radio(self, property:str, store:GimpUi.IntStore) -> Gtk.Widget
+- **get_image**`(*args, **kwargs)`
+  - get_image(self) -> Gimp.Image
 
 - **get_internal_child**`(*args, **kwargs)`
   - get_internal_child(self, builder:Gtk.Builder, childname:str) -> GObject.Object
 
 - **get_label**`(*args, **kwargs)`
-  - get_label(self, label_id:str, text:str, is_markup:bool, with_mnemonic:bool) -> Gtk.Widget
+  - get_label(self) -> Gtk.Widget
 
 - **get_mapped**`(*args, **kwargs)`
   - get_mapped(self) -> bool
@@ -881,15 +709,6 @@ title: GimpUi.objects
 - **get_margin_top**`(*args, **kwargs)`
   - get_margin_top(self) -> int
 
-- **get_mnemonic_modifier**`(*args, **kwargs)`
-  - get_mnemonic_modifier(self) -> Gdk.ModifierType
-
-- **get_mnemonics_visible**`(*args, **kwargs)`
-  - get_mnemonics_visible(self) -> bool
-
-- **get_modal**`(*args, **kwargs)`
-  - get_modal(self) -> bool
-
 - **get_modifier_mask**`(*args, **kwargs)`
   - get_modifier_mask(self, intent:Gdk.ModifierIntent) -> Gdk.ModifierType
 
@@ -899,14 +718,14 @@ title: GimpUi.objects
 - **get_name**`(*args, **kwargs)`
   - get_name(self) -> str
 
-- **get_native_handle**`(*args, **kwargs)`
-  - get_native_handle(self) -> GLib.Bytes
-
 - **get_no_show_all**`(*args, **kwargs)`
   - get_no_show_all(self) -> bool
 
 - **get_opacity**`(*args, **kwargs)`
   - get_opacity(self) -> float
+
+- **get_orientation**`(*args, **kwargs)`
+  - get_orientation(self) -> Gtk.Orientation
 
 - **get_pango_context**`(*args, **kwargs)`
   - get_pango_context(self) -> Pango.Context
@@ -925,9 +744,6 @@ title: GimpUi.objects
 
 - **get_pointer**`(*args, **kwargs)`
   - get_pointer(self) -> x:int, y:int
-
-- **get_position**`(*args, **kwargs)`
-  - get_position(self) -> root_x:int, root_y:int
 
 - **get_preferred_height**`(*args, **kwargs)`
   - get_preferred_height(self) -> minimum_height:int, natural_height:int
@@ -968,26 +784,11 @@ title: GimpUi.objects
 - **get_requisition**`(*args, **kwargs)`
   - get_requisition(self) -> requisition:Gtk.Requisition
 
-- **get_resizable**`(*args, **kwargs)`
-  - get_resizable(self) -> bool
-
-- **get_resize_grip_area**`(*args, **kwargs)`
-  - get_resize_grip_area(self) -> bool, rect:Gdk.Rectangle
-
 - **get_resize_mode**`(*args, **kwargs)`
   - get_resize_mode(self) -> Gtk.ResizeMode
 
-- **get_response_for_widget**`(*args, **kwargs)`
-  - get_response_for_widget(self, widget:Gtk.Widget) -> int
-
-- **get_role**`(*args, **kwargs)`
-  - get_role(self) -> str or None
-
 - **get_root_window**`(*args, **kwargs)`
   - get_root_window(self) -> Gdk.Window
-
-- **get_scale_entry**`(*args, **kwargs)`
-  - get_scale_entry(self, property:str, factor:float) -> Gtk.Widget
 
 - **get_scale_factor**`(*args, **kwargs)`
   - get_scale_factor(self) -> int
@@ -1001,23 +802,11 @@ title: GimpUi.objects
 - **get_settings**`(*args, **kwargs)`
   - get_settings(self) -> Gtk.Settings
 
-- **get_size**`(*args, **kwargs)`
-  - get_size(self) -> width:int, height:int
-
-- **get_size_entry**`(*args, **kwargs)`
-  - get_size_entry(self, property:str, property_is_pixel:bool, unit_property:str, unit_format:str, update_policy:GimpUi.SizeEntryUpdatePolicy, resolution:float) -> Gtk.Widget
-
 - **get_size_request**`(*args, **kwargs)`
   - get_size_request(self) -> width:int, height:int
 
-- **get_skip_pager_hint**`(*args, **kwargs)`
-  - get_skip_pager_hint(self) -> bool
-
-- **get_skip_taskbar_hint**`(*args, **kwargs)`
-  - get_skip_taskbar_hint(self) -> bool
-
-- **get_spin_scale**`(*args, **kwargs)`
-  - get_spin_scale(self, property:str, factor:float) -> Gtk.Widget
+- **get_spacing**`(*args, **kwargs)`
+  - get_spacing(self) -> int
 
 - **get_state**`(*args, **kwargs)`
   - get_state(self) -> Gtk.StateType
@@ -1037,12 +826,6 @@ title: GimpUi.objects
 - **get_template_child**`(*args, **kwargs)`
   - get_template_child(self, widget_type:GType, name:str) -> GObject.Object
 
-- **get_title**`(*args, **kwargs)`
-  - get_title(self) -> str or None
-
-- **get_titlebar**`(*args, **kwargs)`
-  - get_titlebar(self) -> Gtk.Widget or None
-
 - **get_tooltip_markup**`(*args, **kwargs)`
   - get_tooltip_markup(self) -> str or None
 
@@ -1054,15 +837,6 @@ title: GimpUi.objects
 
 - **get_toplevel**`(*args, **kwargs)`
   - get_toplevel(self) -> Gtk.Widget
-
-- **get_transient_for**`(*args, **kwargs)`
-  - get_transient_for(self) -> Gtk.Window or None
-
-- **get_type_hint**`(*args, **kwargs)`
-  - get_type_hint(self) -> Gdk.WindowTypeHint
-
-- **get_urgency_hint**`(*args, **kwargs)`
-  - get_urgency_hint(self) -> bool
 
 - **get_valign**`(*args, **kwargs)`
   - get_valign(self) -> Gtk.Align
@@ -1082,17 +856,8 @@ title: GimpUi.objects
 - **get_visual**`(*args, **kwargs)`
   - get_visual(self) -> Gdk.Visual
 
-- **get_widget**`(*args, **kwargs)`
-  - get_widget(self, property:str, widget_type:GType) -> Gtk.Widget
-
-- **get_widget_for_response**`(*args, **kwargs)`
-  - get_widget_for_response(self, response_id:int) -> Gtk.Widget or None
-
 - **get_window**`(*args, **kwargs)`
   - get_window(self) -> Gdk.Window or None
-
-- **get_window_type**`(*args, **kwargs)`
-  - get_window_type(self) -> Gtk.WindowType
 
 - **getv**`(*args, **kwargs)`
   - getv(self, names:list, values:list)
@@ -1139,17 +904,11 @@ title: GimpUi.objects
 - **has_grab**`(*args, **kwargs)`
   - has_grab(self) -> bool
 
-- **has_group**`(*args, **kwargs)`
-  - has_group(self) -> bool
-
 - **has_rc_style**`(*args, **kwargs)`
   - has_rc_style(self) -> bool
 
 - **has_screen**`(*args, **kwargs)`
   - has_screen(self) -> bool
-
-- **has_toplevel_focus**`(*args, **kwargs)`
-  - has_toplevel_focus(self) -> bool
 
 - **has_visible_focus**`(*args, **kwargs)`
   - has_visible_focus(self) -> bool
@@ -1159,9 +918,6 @@ title: GimpUi.objects
 
 - **hide_on_delete**`(*args, **kwargs)`
   - hide_on_delete(self) -> bool
-
-- **iconify**`(*args, **kwargs)`
-  - iconify(self)
 
 - **in_destruction**`(*args, **kwargs)`
   - in_destruction(self) -> bool
@@ -1202,9 +958,6 @@ title: GimpUi.objects
 - **intersect**`(*args, **kwargs)`
   - intersect(self, area:Gdk.Rectangle) -> bool, intersection:Gdk.Rectangle
 
-- **is_active**`(*args, **kwargs)`
-  - is_active(self) -> bool
-
 - **is_ancestor**`(*args, **kwargs)`
   - is_ancestor(self, ancestor:Gtk.Widget) -> bool
 
@@ -1219,9 +972,6 @@ title: GimpUi.objects
 
 - **is_focus**`(*args, **kwargs)`
   - is_focus(self) -> bool
-
-- **is_maximized**`(*args, **kwargs)`
-  - is_maximized(self) -> bool
 
 - **is_sensitive**`(*args, **kwargs)`
   - is_sensitive(self) -> bool
@@ -1253,17 +1003,11 @@ title: GimpUi.objects
 - **list_style_properties**`(*args, **kwargs)`
   - list_style_properties(self) -> list
 
-- **list_toplevels**`(*args, **kwargs)`
-  - list_toplevels() -> list
-
 - **map**`(*args, **kwargs)`
   - map(self)
 
-- **maximize**`(*args, **kwargs)`
-  - maximize(self)
-
 - **mnemonic_activate**`(*args, **kwargs)`
-  - mnemonic_activate(self, keyval:int, modifier:Gdk.ModifierType) -> bool
+  - mnemonic_activate(self, group_cycling:bool) -> bool
 
 - **modify_base**`(*args, **kwargs)`
   - modify_base(self, state:Gtk.StateType, color:Gdk.Color=None)
@@ -1286,11 +1030,8 @@ title: GimpUi.objects
 - **modify_text**`(*args, **kwargs)`
   - modify_text(self, state:Gtk.StateType, color:Gdk.Color=None)
 
-- **move**`(*args, **kwargs)`
-  - move(self, x:int, y:int)
-
 - **new**`(*args, **kwargs)`
-  - new(procedure:Gimp.VectorLoadProcedure, config:Gimp.ProcedureConfig, extracted_data:Gimp.VectorLoadData=None, file:Gio.File=None) -> Gtk.Widget
+  - new(title:str=None, label:str=None, image:Gimp.Image=None) -> Gtk.Widget
 
 - **newv**`(*args, **kwargs)`
   - newv(object_type:GType, parameters:list) -> GObject.Object
@@ -1319,8 +1060,11 @@ title: GimpUi.objects
 - **override_symbolic_color**`(*args, **kwargs)`
   - override_symbolic_color(self, name:str, color:Gdk.RGBA=None)
 
-- **parse_geometry**`(*args, **kwargs)`
-  - parse_geometry(self, geometry:str) -> bool
+- **pack_end**`(*args, **kwargs)`
+  - pack_end(self, child:Gtk.Widget, expand:bool, fill:bool, padding:int)
+
+- **pack_start**`(*args, **kwargs)`
+  - pack_start(self, child:Gtk.Widget, expand:bool, fill:bool, padding:int)
 
 - **parser_finished**`(*args, **kwargs)`
   - parser_finished(self, builder:Gtk.Builder)
@@ -1331,20 +1075,14 @@ title: GimpUi.objects
 - **pop_composite_child**`(*args, **kwargs)`
   - pop_composite_child()
 
-- **present**`(*args, **kwargs)`
-  - present(self)
-
-- **present_with_time**`(*args, **kwargs)`
-  - present_with_time(self, timestamp:int)
-
 - **propagate_draw**`(*args, **kwargs)`
   - propagate_draw(self, child:Gtk.Widget, cr:cairo.Context)
 
-- **propagate_key_event**`(*args, **kwargs)`
-  - propagate_key_event(self, event:Gdk.EventKey) -> bool
-
 - **push_composite_child**`(*args, **kwargs)`
   - push_composite_child()
+
+- **query_child_packing**`(*args, **kwargs)`
+  - query_child_packing(self, child:Gtk.Widget) -> expand:bool, fill:bool, padding:int, pack_type:Gtk.PackType
 
 - **queue_allocate**`(*args, **kwargs)`
   - queue_allocate(self)
@@ -1385,14 +1123,8 @@ title: GimpUi.objects
 - **remove**`(*args, **kwargs)`
   - remove(self, widget:Gtk.Widget)
 
-- **remove_accel_group**`(*args, **kwargs)`
-  - remove_accel_group(self, accel_group:Gtk.AccelGroup)
-
 - **remove_accelerator**`(*args, **kwargs)`
   - remove_accelerator(self, accel_group:Gtk.AccelGroup, accel_key:int, accel_mods:Gdk.ModifierType) -> bool
-
-- **remove_mnemonic**`(*args, **kwargs)`
-  - remove_mnemonic(self, keyval:int, target:Gtk.Widget)
 
 - **remove_mnemonic_label**`(*args, **kwargs)`
   - remove_mnemonic_label(self, label:Gtk.Widget)
@@ -1405,6 +1137,9 @@ title: GimpUi.objects
 
 - **render_icon_pixbuf**`(*args, **kwargs)`
   - render_icon_pixbuf(self, stock_id:str, size:int) -> GdkPixbuf.Pixbuf or None
+
+- **reorder_child**`(*args, **kwargs)`
+  - reorder_child(self, child:Gtk.Widget, position:int)
 
 - **reparent**`(*args, **kwargs)`
   - reparent(self, new_parent:Gtk.Widget)
@@ -1421,26 +1156,8 @@ title: GimpUi.objects
 - **reset_style**`(*args, **kwargs)`
   - reset_style(self)
 
-- **reshow_with_initial_size**`(*args, **kwargs)`
-  - reshow_with_initial_size(self)
-
-- **resize**`(*args, **kwargs)`
-  - resize(self, width:int, height:int)
-
 - **resize_children**`(*args, **kwargs)`
   - resize_children(self)
-
-- **resize_grip_is_visible**`(*args, **kwargs)`
-  - resize_grip_is_visible(self) -> bool
-
-- **resize_to_geometry**`(*args, **kwargs)`
-  - resize_to_geometry(self, width:int, height:int)
-
-- **response**`(*args, **kwargs)`
-  - response(self, response_id:int)
-
-- **run**`(*args, **kwargs)`
-  - run(self) -> bool
 
 - **run_dispose**`(*args, **kwargs)`
   - run_dispose(self)
@@ -1454,9 +1171,6 @@ title: GimpUi.objects
 - **set_accel_path**`(*args, **kwargs)`
   - set_accel_path(self, accel_path:str=None, accel_group:Gtk.AccelGroup=None)
 
-- **set_accept_focus**`(*args, **kwargs)`
-  - set_accept_focus(self, setting:bool)
-
 - **set_accessible_role**`(*args, **kwargs)`
   - set_accessible_role(self, role:Atk.Role)
 
@@ -1466,20 +1180,11 @@ title: GimpUi.objects
 - **set_allocation**`(*args, **kwargs)`
   - set_allocation(self, allocation:Gdk.Rectangle)
 
-- **set_alternative_button_order_from_array**`(*args, **kwargs)`
-  - set_alternative_button_order_from_array(self, order:list)
-
 - **set_app_paintable**`(*args, **kwargs)`
   - set_app_paintable(self, app_paintable:bool)
 
-- **set_application**`(*args, **kwargs)`
-  - set_application(self, application:Gtk.Application=None)
-
-- **set_attached_to**`(*args, **kwargs)`
-  - set_attached_to(self, attach_widget:Gtk.Widget=None)
-
-- **set_auto_startup_notification**`(*args, **kwargs)`
-  - set_auto_startup_notification(setting:bool)
+- **set_baseline_position**`(*args, **kwargs)`
+  - set_baseline_position(self, position:Gtk.BaselinePosition)
 
 - **set_border_width**`(*args, **kwargs)`
   - set_border_width(self, border_width:int)
@@ -1492,6 +1197,12 @@ title: GimpUi.objects
 
 - **set_can_focus**`(*args, **kwargs)`
   - set_can_focus(self, can_focus:bool)
+
+- **set_center_widget**`(*args, **kwargs)`
+  - set_center_widget(self, widget:Gtk.Widget=None)
+
+- **set_child_packing**`(*args, **kwargs)`
+  - set_child_packing(self, child:Gtk.Widget, expand:bool, fill:bool, padding:int, pack_type:Gtk.PackType)
 
 - **set_child_visible**`(*args, **kwargs)`
   - set_child_visible(self, is_visible:bool)
@@ -1511,41 +1222,8 @@ title: GimpUi.objects
 - **set_data**`(self, *args, **kargs)`
   - documentation unavailable
 
-- **set_decorated**`(*args, **kwargs)`
-  - set_decorated(self, setting:bool)
-
-- **set_default**`(*args, **kwargs)`
-  - set_default(self, default_widget:Gtk.Widget=None)
-
 - **set_default_direction**`(*args, **kwargs)`
   - set_default_direction(dir:Gtk.TextDirection)
-
-- **set_default_geometry**`(*args, **kwargs)`
-  - set_default_geometry(self, width:int, height:int)
-
-- **set_default_icon**`(*args, **kwargs)`
-  - set_default_icon(icon:GdkPixbuf.Pixbuf)
-
-- **set_default_icon_from_file**`(*args, **kwargs)`
-  - set_default_icon_from_file(filename:str) -> bool
-
-- **set_default_icon_list**`(*args, **kwargs)`
-  - set_default_icon_list(list:list)
-
-- **set_default_icon_name**`(*args, **kwargs)`
-  - set_default_icon_name(name:str)
-
-- **set_default_response**`(*args, **kwargs)`
-  - set_default_response(self, response_id:int)
-
-- **set_default_size**`(*args, **kwargs)`
-  - set_default_size(self, width:int, height:int)
-
-- **set_deletable**`(*args, **kwargs)`
-  - set_deletable(self, setting:bool)
-
-- **set_destroy_with_parent**`(*args, **kwargs)`
-  - set_destroy_with_parent(self, setting:bool)
 
 - **set_device_enabled**`(*args, **kwargs)`
   - set_device_enabled(self, device:Gdk.Device, enabled:bool)
@@ -1562,9 +1240,6 @@ title: GimpUi.objects
 - **set_events**`(*args, **kwargs)`
   - set_events(self, events:int)
 
-- **set_focus**`(*args, **kwargs)`
-  - set_focus(self, focus:Gtk.Widget=None)
-
 - **set_focus_chain**`(*args, **kwargs)`
   - set_focus_chain(self, focusable_widgets:list)
 
@@ -1577,14 +1252,8 @@ title: GimpUi.objects
 - **set_focus_on_click**`(*args, **kwargs)`
   - set_focus_on_click(self, focus_on_click:bool)
 
-- **set_focus_on_map**`(*args, **kwargs)`
-  - set_focus_on_map(self, setting:bool)
-
 - **set_focus_vadjustment**`(*args, **kwargs)`
   - set_focus_vadjustment(self, adjustment:Gtk.Adjustment)
-
-- **set_focus_visible**`(*args, **kwargs)`
-  - set_focus_visible(self, setting:bool)
 
 - **set_font_map**`(*args, **kwargs)`
   - set_font_map(self, font_map:Pango.FontMap=None)
@@ -1592,23 +1261,11 @@ title: GimpUi.objects
 - **set_font_options**`(*args, **kwargs)`
   - set_font_options(self, options:cairo.FontOptions=None)
 
-- **set_geometry_hints**`(*args, **kwargs)`
-  - set_geometry_hints(self, geometry_widget:Gtk.Widget=None, geometry:Gdk.Geometry=None, geom_mask:Gdk.WindowHints)
-
-- **set_gravity**`(*args, **kwargs)`
-  - set_gravity(self, gravity:Gdk.Gravity)
-
 - **set_halign**`(*args, **kwargs)`
   - set_halign(self, align:Gtk.Align)
 
-- **set_has_resize_grip**`(*args, **kwargs)`
-  - set_has_resize_grip(self, value:bool)
-
 - **set_has_tooltip**`(*args, **kwargs)`
   - set_has_tooltip(self, has_tooltip:bool)
-
-- **set_has_user_ref_count**`(*args, **kwargs)`
-  - set_has_user_ref_count(self, setting:bool)
 
 - **set_has_window**`(*args, **kwargs)`
   - set_has_window(self, has_window:bool)
@@ -1619,29 +1276,11 @@ title: GimpUi.objects
 - **set_hexpand_set**`(*args, **kwargs)`
   - set_hexpand_set(self, set:bool)
 
-- **set_hide_titlebar_when_maximized**`(*args, **kwargs)`
-  - set_hide_titlebar_when_maximized(self, setting:bool)
+- **set_homogeneous**`(*args, **kwargs)`
+  - set_homogeneous(self, homogeneous:bool)
 
-- **set_icon**`(*args, **kwargs)`
-  - set_icon(self, icon:GdkPixbuf.Pixbuf=None)
-
-- **set_icon_from_file**`(*args, **kwargs)`
-  - set_icon_from_file(self, filename:str) -> bool
-
-- **set_icon_list**`(*args, **kwargs)`
-  - set_icon_list(self, list:list)
-
-- **set_icon_name**`(*args, **kwargs)`
-  - set_icon_name(self, name:str=None)
-
-- **set_interactive_debugging**`(*args, **kwargs)`
-  - set_interactive_debugging(enable:bool)
-
-- **set_keep_above**`(*args, **kwargs)`
-  - set_keep_above(self, setting:bool)
-
-- **set_keep_below**`(*args, **kwargs)`
-  - set_keep_below(self, setting:bool)
+- **set_image**`(*args, **kwargs)`
+  - set_image(self, image:Gimp.Image)
 
 - **set_mapped**`(*args, **kwargs)`
   - set_mapped(self, mapped:bool)
@@ -1664,35 +1303,23 @@ title: GimpUi.objects
 - **set_margin_top**`(*args, **kwargs)`
   - set_margin_top(self, margin:int)
 
-- **set_mnemonic_modifier**`(*args, **kwargs)`
-  - set_mnemonic_modifier(self, modifier:Gdk.ModifierType)
-
-- **set_mnemonics_visible**`(*args, **kwargs)`
-  - set_mnemonics_visible(self, setting:bool)
-
-- **set_modal**`(*args, **kwargs)`
-  - set_modal(self, modal:bool)
-
 - **set_name**`(*args, **kwargs)`
   - set_name(self, name:str)
 
 - **set_no_show_all**`(*args, **kwargs)`
   - set_no_show_all(self, no_show_all:bool)
 
-- **set_ok_label**`(*args, **kwargs)`
-  - set_ok_label(self, ok_label:str)
-
 - **set_opacity**`(*args, **kwargs)`
   - set_opacity(self, opacity:float)
+
+- **set_orientation**`(*args, **kwargs)`
+  - set_orientation(self, orientation:Gtk.Orientation)
 
 - **set_parent**`(*args, **kwargs)`
   - set_parent(self, parent:Gtk.Widget)
 
 - **set_parent_window**`(*args, **kwargs)`
   - set_parent_window(self, parent_window:Gdk.Window)
-
-- **set_position**`(*args, **kwargs)`
-  - set_position(self, position:Gtk.WindowPosition)
 
 - **set_properties**`(bound native)`
   - documentation unavailable
@@ -1712,38 +1339,17 @@ title: GimpUi.objects
 - **set_redraw_on_allocate**`(*args, **kwargs)`
   - set_redraw_on_allocate(self, redraw_on_allocate:bool)
 
-- **set_resizable**`(*args, **kwargs)`
-  - set_resizable(self, resizable:bool)
-
 - **set_resize_mode**`(*args, **kwargs)`
   - set_resize_mode(self, resize_mode:Gtk.ResizeMode)
 
-- **set_response_sensitive**`(*args, **kwargs)`
-  - set_response_sensitive(self, response_id:int, setting:bool)
-
-- **set_role**`(*args, **kwargs)`
-  - set_role(self, role:str)
-
-- **set_screen**`(*args, **kwargs)`
-  - set_screen(self, screen:Gdk.Screen)
-
 - **set_sensitive**`(*args, **kwargs)`
-  - set_sensitive(self, property:str, sensitive:bool, config:GObject.Object=None, config_property:str=None, config_invert:bool)
-
-- **set_sensitive_if_in**`(*args, **kwargs)`
-  - set_sensitive_if_in(self, property:str, config:GObject.Object=None, config_property:str, values:Gimp.ValueArray, in_values:bool)
+  - set_sensitive(self, sensitive:bool)
 
 - **set_size_request**`(*args, **kwargs)`
   - set_size_request(self, width:int, height:int)
 
-- **set_skip_pager_hint**`(*args, **kwargs)`
-  - set_skip_pager_hint(self, setting:bool)
-
-- **set_skip_taskbar_hint**`(*args, **kwargs)`
-  - set_skip_taskbar_hint(self, setting:bool)
-
-- **set_startup_id**`(*args, **kwargs)`
-  - set_startup_id(self, startup_id:str)
+- **set_spacing**`(*args, **kwargs)`
+  - set_spacing(self, spacing:int)
 
 - **set_state**`(*args, **kwargs)`
   - set_state(self, state:Gtk.StateType)
@@ -1763,12 +1369,6 @@ title: GimpUi.objects
 - **set_template_from_resource**`(*args, **kwargs)`
   - set_template_from_resource(self, resource_name:str)
 
-- **set_title**`(*args, **kwargs)`
-  - set_title(self, title:str)
-
-- **set_titlebar**`(*args, **kwargs)`
-  - set_titlebar(self, titlebar:Gtk.Widget=None)
-
 - **set_tooltip_markup**`(*args, **kwargs)`
   - set_tooltip_markup(self, markup:str=None)
 
@@ -1777,15 +1377,6 @@ title: GimpUi.objects
 
 - **set_tooltip_window**`(*args, **kwargs)`
   - set_tooltip_window(self, custom_window:Gtk.Window=None)
-
-- **set_transient_for**`(*args, **kwargs)`
-  - set_transient_for(self, parent:Gtk.Window=None)
-
-- **set_type_hint**`(*args, **kwargs)`
-  - set_type_hint(self, hint:Gdk.WindowTypeHint)
-
-- **set_urgency_hint**`(*args, **kwargs)`
-  - set_urgency_hint(self, setting:bool)
 
 - **set_valign**`(*args, **kwargs)`
   - set_valign(self, align:Gtk.Align)
@@ -1804,9 +1395,6 @@ title: GimpUi.objects
 
 - **set_window**`(*args, **kwargs)`
   - set_window(self, window:Gdk.Window)
-
-- **set_wmclass**`(*args, **kwargs)`
-  - set_wmclass(self, wmclass_name:str, wmclass_class:str)
 
 - **shape_combine_region**`(*args, **kwargs)`
   - shape_combine_region(self, region:cairo.Region=None)
@@ -1835,9 +1423,6 @@ title: GimpUi.objects
 - **steal_qdata**`(self, *args, **kargs)`
   - documentation unavailable
 
-- **stick**`(*args, **kwargs)`
-  - stick(self)
-
 - **stop_emission**`(self, detailed_signal)`
   - Deprecated, please use stop_emission_by_name.
 
@@ -1862,14 +1447,8 @@ title: GimpUi.objects
 - **trigger_tooltip_query**`(*args, **kwargs)`
   - trigger_tooltip_query(self)
 
-- **unfullscreen**`(*args, **kwargs)`
-  - unfullscreen(self)
-
 - **unmap**`(*args, **kwargs)`
   - unmap(self)
-
-- **unmaximize**`(*args, **kwargs)`
-  - unmaximize(self)
 
 - **unparent**`(*args, **kwargs)`
   - unparent(self)
@@ -1888,9 +1467,6 @@ title: GimpUi.objects
 
 - **unset_state_flags**`(*args, **kwargs)`
   - unset_state_flags(self, flags:Gtk.StateFlags)
-
-- **unstick**`(*args, **kwargs)`
-  - unstick(self)
 
 - **watch_closure**`(self, *args, **kargs)`
   - documentation unavailable

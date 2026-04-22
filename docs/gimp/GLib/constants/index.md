@@ -6,8 +6,8 @@ title: GLib.constants
 
 ## Constants table
 
+:------------------------------------------------|------------------------------:|:-------------------:|:------------------|
 | Name | Value | Type | Documentation |
-|------------------|-------------------|-------------------|------------------|
 | ALLOCATOR_LIST | 1 | <class 'int'> | § |
 | ALLOCATOR_NODE | 3 | <class 'int'> | § |
 | ALLOCATOR_SLIST | 2 | <class 'int'> | § |
@@ -95,7 +95,7 @@ title: GLib.constants
 | MAXUINT32 | 4294967295 | <class 'int'> | § |
 | MAXUINT64 | 18446744073709551615 | <class 'int'> | § |
 | MAXUINT8 | 255 | <class 'int'> | § |
-| MICRO_VERSION | 3 | <class 'int'> | § |
+| MICRO_VERSION | 4 | <class 'int'> | § |
 | MININT16 | -32768 | <class 'int'> | § |
 | MININT32 | -2147483648 | <class 'int'> | § |
 | MININT64 | -9223372036854775808 | <class 'int'> | § |

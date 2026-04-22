@@ -262,6 +262,33 @@ title: Gimp.objects
 - **get_opacity**`(*args, **kwargs)`
   - get_opacity(self) -> float
 
+- **get_outline**`(*args, **kwargs)`
+  - get_outline(self) -> Gimp.TextOutline
+
+- **get_outline_antialias**`(*args, **kwargs)`
+  - get_outline_antialias(self) -> bool
+
+- **get_outline_cap_style**`(*args, **kwargs)`
+  - get_outline_cap_style(self) -> Gimp.CapStyle
+
+- **get_outline_color**`(*args, **kwargs)`
+  - get_outline_color(self) -> Gegl.Color
+
+- **get_outline_dash_offset**`(*args, **kwargs)`
+  - get_outline_dash_offset(self) -> float
+
+- **get_outline_direction**`(*args, **kwargs)`
+  - get_outline_direction(self) -> Gimp.TextOutlineDirection
+
+- **get_outline_join_style**`(*args, **kwargs)`
+  - get_outline_join_style(self) -> Gimp.JoinStyle
+
+- **get_outline_miter_limit**`(*args, **kwargs)`
+  - get_outline_miter_limit(self) -> float
+
+- **get_outline_width**`(*args, **kwargs)`
+  - get_outline_width(self) -> float, outline_unit:Gimp.Unit
+
 - **get_parasite**`(*args, **kwargs)`
   - get_parasite(self, name:str) -> Gimp.Parasite
 
@@ -361,6 +388,9 @@ title: Gimp.objects
 - **id_is_layer_mask**`(*args, **kwargs)`
   - id_is_layer_mask(item_id:int) -> bool
 
+- **id_is_link_layer**`(*args, **kwargs)`
+  - id_is_link_layer(item_id:int) -> bool
+
 - **id_is_path**`(*args, **kwargs)`
   - id_is_path(item_id:int) -> bool
 
@@ -372,6 +402,9 @@ title: Gimp.objects
 
 - **id_is_valid**`(*args, **kwargs)`
   - id_is_valid(item_id:int) -> bool
+
+- **id_is_vector_layer**`(*args, **kwargs)`
+  - id_is_vector_layer(item_id:int) -> bool
 
 - **install_properties**`(*args, **kwargs)`
   - install_properties(self, pspecs:list)
@@ -421,8 +454,14 @@ title: Gimp.objects
 - **is_layer_mask**`(*args, **kwargs)`
   - is_layer_mask(self) -> bool
 
+- **is_link_layer**`(*args, **kwargs)`
+  - is_link_layer(self) -> bool
+
 - **is_path**`(*args, **kwargs)`
   - is_path(self) -> bool
+
+- **is_rasterized**`(*args, **kwargs)`
+  - is_rasterized(self) -> bool
 
 - **is_rgb**`(*args, **kwargs)`
   - is_rgb(self) -> bool
@@ -435,6 +474,9 @@ title: Gimp.objects
 
 - **is_valid**`(*args, **kwargs)`
   - is_valid(self) -> bool
+
+- **is_vector_layer**`(*args, **kwargs)`
+  - is_vector_layer(self) -> bool
 
 - **levels**`(*args, **kwargs)`
   - levels(self, channel:Gimp.HistogramChannel, low_input:float, high_input:float, clamp_input:bool, gamma:float, low_output:float, high_output:float, clamp_output:bool) -> bool
@@ -493,6 +535,9 @@ title: Gimp.objects
 - **posterize**`(*args, **kwargs)`
   - posterize(self, levels:int) -> bool
 
+- **rasterize**`(*args, **kwargs)`
+  - rasterize(self) -> bool
+
 - **ref**`(self, *args, **kargs)`
   - documentation unavailable
 
@@ -513,6 +558,9 @@ title: Gimp.objects
 
 - **resize_to_image_size**`(*args, **kwargs)`
   - resize_to_image_size(self) -> bool
+
+- **restore**`(*args, **kwargs)`
+  - restore(self) -> bool
 
 - **run_dispose**`(*args, **kwargs)`
   - run_dispose(self)
@@ -606,6 +654,33 @@ title: Gimp.objects
 
 - **set_opacity**`(*args, **kwargs)`
   - set_opacity(self, opacity:float) -> bool
+
+- **set_outline**`(*args, **kwargs)`
+  - set_outline(self, outline:Gimp.TextOutline) -> bool
+
+- **set_outline_antialias**`(*args, **kwargs)`
+  - set_outline_antialias(self, outline_antialias:bool) -> bool
+
+- **set_outline_cap_style**`(*args, **kwargs)`
+  - set_outline_cap_style(self, outline_cap_style:Gimp.CapStyle) -> bool
+
+- **set_outline_color**`(*args, **kwargs)`
+  - set_outline_color(self, color:Gegl.Color) -> bool
+
+- **set_outline_dash_offset**`(*args, **kwargs)`
+  - set_outline_dash_offset(self, outline_dash_offset:float) -> bool
+
+- **set_outline_direction**`(*args, **kwargs)`
+  - set_outline_direction(self, outline_direction:Gimp.TextOutlineDirection) -> bool
+
+- **set_outline_join_style**`(*args, **kwargs)`
+  - set_outline_join_style(self, outline_join_style:Gimp.JoinStyle) -> bool
+
+- **set_outline_miter_limit**`(*args, **kwargs)`
+  - set_outline_miter_limit(self, outline_miter_limit:float) -> bool
+
+- **set_outline_width**`(*args, **kwargs)`
+  - set_outline_width(self, outline_width:float, outline_unit:Gimp.Unit) -> bool
 
 - **set_pixel**`(*args, **kwargs)`
   - set_pixel(self, x_coord:int, y_coord:int, color:Gegl.Color) -> bool

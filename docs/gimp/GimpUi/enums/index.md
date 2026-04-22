@@ -8,11 +8,11 @@ title: GimpUi.enums
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| LANDSCAPE | 2 |
-| PORTRAIT | 1 |
 | SQUARE | 0 |
+| PORTRAIT | 1 |
+| LANDSCAPE | 2 |
 
 ### Other runtime attributes ‡
 - **denominator**
@@ -46,143 +46,152 @@ title: GimpUi.enums
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## ChainPosition
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BOTTOM | 2 |
-| LEFT | 1 |
-| RIGHT | 3 |
 | TOP | 0 |
+| LEFT | 1 |
+| BOTTOM | 2 |
+| RIGHT | 3 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ColorAreaType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | FLAT | 0 |
-| LARGE_CHECKS | 2 |
 | SMALL_CHECKS | 1 |
+| LARGE_CHECKS | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ColorSelectorChannel
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALPHA | 6 |
-| BLUE | 5 |
-| GREEN | 4 |
 | HUE | 0 |
-| LCH_CHROMA | 8 |
-| LCH_HUE | 9 |
-| LCH_LIGHTNESS | 7 |
-| RED | 3 |
 | SATURATION | 1 |
 | VALUE | 2 |
+| RED | 3 |
+| GREEN | 4 |
+| BLUE | 5 |
+| ALPHA | 6 |
+| LCH_LIGHTNESS | 7 |
+| LCH_CHROMA | 8 |
+| LCH_HUE | 9 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ColorSelectorModel
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| HSV | 2 |
-| LCH | 1 |
 | RGB | 0 |
+| LCH | 1 |
+| HSV | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## IntComboBoxLayout
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| ICON_ONLY | 0 |
 | ABBREVIATED | 1 |
 | FULL | 2 |
-| ICON_ONLY | 0 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## IntStoreColumns
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| VALUE | 0 |
+| LABEL | 1 |
 | ABBREV | 2 |
 | ICON_NAME | 3 |
-| LABEL | 1 |
-| NUM_COLUMNS | 6 |
 | PIXBUF | 4 |
 | USER_DATA | 5 |
-| VALUE | 0 |
+| NUM_COLUMNS | 6 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## PageSelectorTarget
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| IMAGES | 1 |
 | LAYERS | 0 |
+| IMAGES | 1 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SizeEntryUpdatePolicy
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | NONE | 0 |
-| RESOLUTION | 2 |
 | SIZE | 1 |
+| RESOLUTION | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## WidgetsError
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | WIDGETS_PARSE_ERROR | 0 |
 
 ### Other runtime attributes ‡
@@ -190,12 +199,13 @@ title: GimpUi.enums
 
 ### Runtime functions †
 
+<br>
 ## ZoomType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | IN | 0 |
 | OUT | 1 |
 
@@ -203,3 +213,5 @@ title: GimpUi.enums
 
 
 ### Runtime functions †
+
+<br>

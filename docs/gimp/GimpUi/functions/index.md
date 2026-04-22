@@ -400,6 +400,12 @@ title: GimpUi.functions
 ### Runtime functions †
 
 
+## prop_image_chooser_new
+- prop_image_chooser_new(config:GObject.Object, property_name:str, chooser_title:str=None) -> Gtk.Widget
+
+### Runtime functions †
+
+
 ## prop_int_combo_box_new
 - prop_int_combo_box_new(config:GObject.Object, property_name:str, store:GimpUi.IntStore) -> Gtk.Widget
 
@@ -408,6 +414,12 @@ title: GimpUi.functions
 
 ## prop_int_radio_frame_new
 - prop_int_radio_frame_new(config:GObject.Object, property_name:str, title:str=None, store:GimpUi.IntStore) -> Gtk.Widget
+
+### Runtime functions †
+
+
+## prop_item_chooser_new
+- prop_item_chooser_new(config:GObject.Object, property_name:str, chooser_title:str=None) -> Gtk.Widget
 
 ### Runtime functions †
 
@@ -508,6 +520,12 @@ title: GimpUi.functions
 ### Runtime functions †
 
 
+## prop_toggle_new
+- prop_toggle_new(config:GObject.Object, property_name:str, icon_name:str, label:str) -> Gtk.Widget, image_out:Gtk.Widget
+
+### Runtime functions †
+
+
 ## prop_unit_combo_box_new
 - prop_unit_combo_box_new(config:GObject.Object, property_name:str) -> Gtk.Widget
 
@@ -593,7 +611,7 @@ title: GimpUi.functions
 
 
 ## widget_free_native_handle
-- widget_free_native_handle(widget:Gtk.Widget) -> window_handle:GLib.Bytes
+- widget_free_native_handle(widget:Gtk.Widget, window_handle:GLib.Bytes) -> window_handle:GLib.Bytes
 
 ### Runtime functions †
 
@@ -623,7 +641,7 @@ title: GimpUi.functions
 
 
 ## widget_set_native_handle
-- widget_set_native_handle(widget:Gtk.Widget) -> handle:GLib.Bytes
+- widget_set_native_handle(widget:Gtk.Widget, window_handle:GLib.Bytes) -> window_handle:GLib.Bytes
 
 ### Runtime functions †
 

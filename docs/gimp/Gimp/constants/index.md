@@ -6,8 +6,8 @@ title: Gimp.constants
 
 ## Constants table
 
+:------------------------------------------------|------------------------------:|:-------------------:|:------------------|
 | Name | Value | Type | Documentation |
-|------------------|-------------------|-------------------|------------------|
 | API_VERSION | 3.0 | <class 'str'> | § |
 | CHECK_DARK | 0.4 | <class 'float'> | §§ |
 | CHECK_LIGHT | 0.6 | <class 'float'> | §§ |
@@ -27,7 +27,7 @@ title: Gimp.constants
 | MAX_MEMSIZE | unavailable | unavailable | unavailable |
 | MAX_RESOLUTION | 1048576.0 | <class 'float'> | §§ |
 | MICRO_VERSION | 4 | <class 'int'> | §§§ |
-| MINOR_VERSION | unavailable | unavailable | unavailable |
+| MINOR_VERSION | 2 | <class 'int'> | §§§ |
 | MIN_IMAGE_SIZE | 1 | <class 'int'> | §§§ |
 | MIN_RESOLUTION | 0.005 | <class 'float'> | §§ |
 | MODULE_ABI_VERSION | 5 | <class 'int'> | §§§ |
@@ -47,7 +47,7 @@ title: Gimp.constants
 | PARASITE_PERSISTENT | 1 | <class 'int'> | §§§ |
 | PARASITE_UNDOABLE | 2 | <class 'int'> | §§§ |
 | PIXPIPE_MAXDIM | 4 | <class 'int'> | §§§ |
-| VERSION | 3.0.4 | <class 'str'> | § |
+| VERSION | 3.2.4 | <class 'str'> | § |
 
 ## Documentation §
 - str(object='') -> str<br />str(bytes_or_buffer[, encoding[, errors]]) -> str<br /><br />Create a new string object from the given object. If encoding or<br />errors is specified, then the object must expose a data buffer<br />that will be decoded using the given encoding and error handler.<br />Otherwise, returns the result of object.__str__() (if defined)<br />or repr(object).<br />encoding defaults to 'utf-8'.<br />errors defaults to 'strict'.

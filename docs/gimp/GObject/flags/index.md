@@ -8,12 +8,12 @@ title: GObject.flags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BIDIRECTIONAL | 1 |
 | DEFAULT | 0 |
-| INVERT_BOOLEAN | 4 |
+| BIDIRECTIONAL | 1 |
 | SYNC_CREATE | 2 |
+| INVERT_BOOLEAN | 4 |
 
 ### Other runtime attributes ‡
 - **denominator**
@@ -49,14 +49,15 @@ title: GObject.flags
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## ConnectFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| AFTER | 1 |
 | DEFAULT | 0 |
+| AFTER | 1 |
 | SWAPPED | 2 |
 
 ### Other runtime attributes ‡
@@ -64,81 +65,84 @@ title: GObject.flags
 
 ### Runtime functions †
 
+<br>
 ## IOCondition
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| IN | 1 |
+| PRI | 2 |
+| OUT | 4 |
 | ERR | 8 |
 | HUP | 16 |
-| IN | 1 |
 | NVAL | 32 |
-| OUT | 4 |
-| PRI | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ParamFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| READABLE | 1 |
+| WRITABLE | 2 |
+| READWRITE | 3 |
 | CONSTRUCT | 4 |
 | CONSTRUCT_ONLY | 8 |
-| DEPRECATED | 2147483648 |
-| EXPLICIT_NOTIFY | 1073741824 |
 | LAX_VALIDATION | 16 |
-| PRIVATE | 32 |
-| READABLE | 1 |
-| READWRITE | 3 |
-| STATIC_BLURB | 128 |
 | STATIC_NAME | 32 |
 | STATIC_NICK | 64 |
-| WRITABLE | 2 |
+| STATIC_BLURB | 128 |
+| EXPLICIT_NOTIFY | 1073741824 |
+| DEPRECATED | 2147483648 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SignalFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ACCUMULATOR_FIRST_RUN | 131072 |
-| ACTION | 32 |
-| DEPRECATED | 256 |
-| DETAILED | 16 |
-| MUST_COLLECT | 128 |
-| NO_HOOKS | 64 |
-| NO_RECURSE | 8 |
-| RUN_CLEANUP | 4 |
 | RUN_FIRST | 1 |
 | RUN_LAST | 2 |
+| RUN_CLEANUP | 4 |
+| NO_RECURSE | 8 |
+| DETAILED | 16 |
+| ACTION | 32 |
+| NO_HOOKS | 64 |
+| MUST_COLLECT | 128 |
+| DEPRECATED | 256 |
+| ACCUMULATOR_FIRST_RUN | 131072 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SignalMatchType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CLOSURE | 4 |
-| DATA | 16 |
-| DETAIL | 2 |
-| FUNC | 8 |
 | ID | 1 |
+| DETAIL | 2 |
+| CLOSURE | 4 |
+| FUNC | 8 |
+| DATA | 16 |
 | UNBLOCKED | 32 |
 
 ### Other runtime attributes ‡
@@ -146,52 +150,57 @@ title: GObject.flags
 
 ### Runtime functions †
 
+<br>
 ## TypeDebugFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| INSTANCE_COUNT | 4 |
-| MASK | 7 |
 | NONE | 0 |
 | OBJECTS | 1 |
 | SIGNALS | 2 |
+| INSTANCE_COUNT | 4 |
+| MASK | 7 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TypeFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ABSTRACT | 16 |
-| DEPRECATED | 128 |
-| FINAL | 64 |
 | NONE | 0 |
+| ABSTRACT | 16 |
 | VALUE_ABSTRACT | 32 |
+| FINAL | 64 |
+| DEPRECATED | 128 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TypeFundamentalFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | CLASSED | 1 |
-| DEEP_DERIVABLE | 8 |
-| DERIVABLE | 4 |
 | INSTANTIATABLE | 2 |
+| DERIVABLE | 4 |
+| DEEP_DERIVABLE | 8 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
+
+<br>

@@ -223,6 +223,15 @@ title: Gimp.objects
 - **add_layer_return_value**`(*args, **kwargs)`
   - add_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
 
+- **add_link_layer_argument**`(*args, **kwargs)`
+  - add_link_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
+
+- **add_link_layer_aux_argument**`(*args, **kwargs)`
+  - add_link_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
+
+- **add_link_layer_return_value**`(*args, **kwargs)`
+  - add_link_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
+
 - **add_menu_path**`(*args, **kwargs)`
   - add_menu_path(self, menu_path:str)
 
@@ -333,6 +342,15 @@ title: Gimp.objects
 
 - **add_unit_return_value**`(*args, **kwargs)`
   - add_unit_return_value(self, name:str, nick:str, blurb:str=None, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags)
+
+- **add_vector_layer_argument**`(*args, **kwargs)`
+  - add_vector_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
+
+- **add_vector_layer_aux_argument**`(*args, **kwargs)`
+  - add_vector_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
+
+- **add_vector_layer_return_value**`(*args, **kwargs)`
+  - add_vector_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags)
 
 - **bind_property**`(bound native)`
   - documentation unavailable

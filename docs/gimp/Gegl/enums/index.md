@@ -8,12 +8,12 @@ title: Gegl.enums
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BLACK | 3 |
+| NONE | 0 |
 | CLAMP | 1 |
 | LOOP | 2 |
-| NONE | 0 |
+| BLACK | 3 |
 | WHITE | 4 |
 
 ### Other runtime attributes ‡
@@ -48,86 +48,91 @@ title: Gegl.enums
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## BablVariant
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ADD_ALPHA | 8 |
 | FLOAT | 0 |
 | LINEAR | 1 |
-| LINEAR_PREMULTIPLIED | 4 |
-| LINEAR_PREMULTIPLIED_IF_ALPHA | 6 |
 | NON_LINEAR | 2 |
 | PERCEPTUAL | 3 |
+| LINEAR_PREMULTIPLIED | 4 |
 | PERCEPTUAL_PREMULTIPLIED | 5 |
+| LINEAR_PREMULTIPLIED_IF_ALPHA | 6 |
 | PERCEPTUAL_PREMULTIPLIED_IF_ALPHA | 7 |
+| ADD_ALPHA | 8 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## CachePolicy
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALWAYS | 2 |
 | AUTO | 0 |
 | NEVER | 1 |
+| ALWAYS | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## DistanceMetric
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CHEBYSHEV | 2 |
 | EUCLIDEAN | 0 |
 | MANHATTAN | 1 |
+| CHEBYSHEV | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## DitherMethod
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ADD | 5 |
-| ADD_COVARIANT | 6 |
-| BAYER | 2 |
-| BLUE_NOISE | 9 |
-| BLUE_NOISE_COVARIANT | 10 |
-| FLOYD_STEINBERG | 1 |
 | NONE | 0 |
+| FLOYD_STEINBERG | 1 |
+| BAYER | 2 |
 | RANDOM | 3 |
 | RANDOM_COVARIANT | 4 |
+| ADD | 5 |
+| ADD_COVARIANT | 6 |
 | XOR | 7 |
 | XOR_COVARIANT | 8 |
+| BLUE_NOISE | 9 |
+| BLUE_NOISE_COVARIANT | 10 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## MapFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | MAP_EXCLUDE_UNMAPPED | 1 |
 
 ### Other runtime attributes ‡
@@ -135,12 +140,13 @@ title: Gegl.enums
 
 ### Runtime functions †
 
+<br>
 ## Orientation
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | HORIZONTAL | 0 |
 | VERTICAL | 1 |
 
@@ -149,59 +155,63 @@ title: Gegl.enums
 
 ### Runtime functions †
 
+<br>
 ## RectangleAlignment
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| NEAREST | 2 |
 | SUBSET | 0 |
 | SUPERSET | 1 |
+| NEAREST | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ResolutionUnit
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| NONE | 0 |
 | DPI | 1 |
 | DPM | 2 |
-| NONE | 0 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SamplerType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CUBIC | 2 |
-| LINEAR | 1 |
-| LOHALO | 4 |
 | NEAREST | 0 |
+| LINEAR | 1 |
+| CUBIC | 2 |
 | NOHALO | 3 |
+| LOHALO | 4 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SplitStrategy
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | AUTO | 0 |
 | HORIZONTAL | 1 |
 | VERTICAL | 2 |
@@ -211,26 +221,28 @@ title: Gegl.enums
 
 ### Runtime functions †
 
+<br>
 ## TileCommand
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| EGL_TILE_COPY | 9 |
-| EGL_TILE_EXIST | 4 |
-| EGL_TILE_FLUSH | 6 |
-| EGL_TILE_GET | 2 |
 | EGL_TILE_IDLE | 0 |
+| EGL_TILE_SET | 1 |
+| EGL_TILE_GET | 2 |
 | EGL_TILE_IS_CACHED | 3 |
-| EGL_TILE_LAST_COMMAND | 10 |
+| EGL_TILE_EXIST | 4 |
+| EGL_TILE_VOID | 5 |
+| EGL_TILE_FLUSH | 6 |
 | EGL_TILE_REFETCH | 7 |
 | EGL_TILE_REINIT | 8 |
-| EGL_TILE_SET | 1 |
-| EGL_TILE_VOID | 5 |
 | GEGL_TILE_LAST_0_4_8_COMMAND | 9 |
+| EGL_TILE_LAST_COMMAND | 10 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
+
+<br>

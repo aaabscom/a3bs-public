@@ -4,8 +4,8 @@ title: Gimp.objects
 ---
 # Gimp.objects
 
-## DrawableFilter
-- :Constructors:<br /><br />::<br /><br />    DrawableFilter(**properties)<br />    new(drawable:Gimp.Drawable, operation_name:str, name:str=None) -> Gimp.DrawableFilter
+## Curve
+- :Constructors:<br /><br />::<br /><br />    Curve(**properties)<br />    new() -> Gimp.Curve
 
 ### Runtime attributes
 
@@ -15,6 +15,9 @@ title: Gimp.objects
 - **ref_count**
 
 ### Runtime functions
+- **add_point**`(*args, **kwargs)`
+  - add_point(self, x:float, y:float) -> int
+
 - **bind_property**`(bound native)`
   - documentation unavailable
 
@@ -23,6 +26,9 @@ title: Gimp.objects
 
 - **chain**`(bound native)`
   - documentation unavailable
+
+- **clear_points**`(*args, **kwargs)`
+  - clear_points(self)
 
 - **compat_control**`(self, *args, **kargs)`
   - documentation unavailable
@@ -42,8 +48,8 @@ title: Gimp.objects
 - **connect_object_after**`(bound native)`
   - documentation unavailable
 
-- **delete**`(*args, **kwargs)`
-  - delete(self) -> bool
+- **delete_point**`(*args, **kwargs)`
+  - delete_point(self, point:int)
 
 - **disconnect**`(*args, **kwargs)`
   - signal_handler_disconnect(instance:GObject.Object, handler_id:int)
@@ -66,29 +72,23 @@ title: Gimp.objects
 - **freeze_notify**`(self)`
   - Freezes the object's property-changed notification queue.<br /><br />:returns:<br />    A context manager which optionally can be used to<br />    automatically thaw notifications.<br /><br />This will freeze the object so that "notify" signals are blocked until<br />the thaw_notify() method is called.<br /><br />.. code-block:: python<br /><br />    with obj.freeze_notify():<br />        pass
 
-- **get_blend_mode**`(*args, **kwargs)`
-  - get_blend_mode(self) -> Gimp.LayerMode
-
-- **get_by_id**`(*args, **kwargs)`
-  - get_by_id(filter_id:int) -> Gimp.DrawableFilter or None
-
-- **get_config**`(*args, **kwargs)`
-  - get_config(self) -> Gimp.DrawableFilterConfig
+- **get_curve_type**`(*args, **kwargs)`
+  - get_curve_type(self) -> Gimp.CurveType
 
 - **get_data**`(self, *args, **kargs)`
   - documentation unavailable
 
-- **get_id**`(*args, **kwargs)`
-  - get_id(self) -> int
+- **get_n_points**`(*args, **kwargs)`
+  - get_n_points(self) -> int
 
-- **get_name**`(*args, **kwargs)`
-  - get_name(self) -> str
+- **get_n_samples**`(*args, **kwargs)`
+  - get_n_samples(self) -> int
 
-- **get_opacity**`(*args, **kwargs)`
-  - get_opacity(self) -> float
+- **get_point**`(*args, **kwargs)`
+  - get_point(self, point:int) -> x:float, y:float
 
-- **get_operation_name**`(*args, **kwargs)`
-  - get_operation_name(self) -> str
+- **get_point_type**`(*args, **kwargs)`
+  - get_point_type(self, point:int) -> Gimp.CurvePointType
 
 - **get_properties**`(bound native)`
   - documentation unavailable
@@ -99,8 +99,8 @@ title: Gimp.objects
 - **get_qdata**`(self, *args, **kargs)`
   - documentation unavailable
 
-- **get_visible**`(*args, **kwargs)`
-  - get_visible(self) -> bool
+- **get_sample**`(*args, **kwargs)`
+  - get_sample(self, x:float) -> float
 
 - **getv**`(*args, **kwargs)`
   - getv(self, names:list, values:list)
@@ -123,9 +123,6 @@ title: Gimp.objects
 - **handler_unblock_by_func**`(bound native)`
   - documentation unavailable
 
-- **id_is_valid**`(*args, **kwargs)`
-  - id_is_valid(filter_id:int) -> bool
-
 - **install_properties**`(*args, **kwargs)`
   - install_properties(self, pspecs:list)
 
@@ -144,14 +141,14 @@ title: Gimp.objects
 - **is_floating**`(*args, **kwargs)`
   - is_floating(self) -> bool
 
-- **is_valid**`(*args, **kwargs)`
-  - is_valid(self) -> bool
+- **is_identity**`(*args, **kwargs)`
+  - is_identity(self) -> bool
 
 - **list_properties**`(*args, **kwargs)`
   - list_properties(self) -> list
 
 - **new**`(*args, **kwargs)`
-  - new(drawable:Gimp.Drawable, operation_name:str, name:str=None) -> Gimp.DrawableFilter
+  - new() -> Gimp.Curve
 
 - **newv**`(*args, **kwargs)`
   - newv(object_type:GType, parameters:list) -> GObject.Object
@@ -161,15 +158,6 @@ title: Gimp.objects
 
 - **notify_by_pspec**`(self, *args, **kargs)`
   - documentation unavailable
-
-- **operation_get_available**`(*args, **kwargs)`
-  - operation_get_available() -> list
-
-- **operation_get_details**`(*args, **kwargs)`
-  - operation_get_details(operation_name:str) -> bool, propnames:list, propvalues:Gimp.ValueArray
-
-- **operation_get_pspecs**`(*args, **kwargs)`
-  - operation_get_pspecs(operation_name:str) -> Gimp.ValueArray
 
 - **override_property**`(*args, **kwargs)`
   - override_property(self, property_id:int, name:str)
@@ -189,17 +177,20 @@ title: Gimp.objects
 - **run_dispose**`(*args, **kwargs)`
   - run_dispose(self)
 
-- **set_aux_input**`(*args, **kwargs)`
-  - set_aux_input(self, input_pad_name:str, input:Gimp.Drawable)
-
-- **set_blend_mode**`(*args, **kwargs)`
-  - set_blend_mode(self, mode:Gimp.LayerMode)
+- **set_curve_type**`(*args, **kwargs)`
+  - set_curve_type(self, curve_type:Gimp.CurveType)
 
 - **set_data**`(self, *args, **kargs)`
   - documentation unavailable
 
-- **set_opacity**`(*args, **kwargs)`
-  - set_opacity(self, opacity:float)
+- **set_n_samples**`(*args, **kwargs)`
+  - set_n_samples(self, n_samples:int)
+
+- **set_point**`(*args, **kwargs)`
+  - set_point(self, point:int, x:float, y:float)
+
+- **set_point_type**`(*args, **kwargs)`
+  - set_point_type(self, point:int, type:Gimp.CurvePointType)
 
 - **set_properties**`(bound native)`
   - documentation unavailable
@@ -207,8 +198,8 @@ title: Gimp.objects
 - **set_property**`(bound native)`
   - documentation unavailable
 
-- **set_visible**`(*args, **kwargs)`
-  - set_visible(self, visible:bool) -> bool
+- **set_sample**`(*args, **kwargs)`
+  - set_sample(self, x:float, y:float)
 
 - **steal_data**`(self, *args, **kargs)`
   - documentation unavailable
@@ -227,9 +218,6 @@ title: Gimp.objects
 
 - **unref**`(self, *args, **kargs)`
   - documentation unavailable
-
-- **update**`(*args, **kwargs)`
-  - update(self)
 
 - **watch_closure**`(self, *args, **kargs)`
   - documentation unavailable

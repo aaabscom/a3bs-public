@@ -8,8 +8,8 @@ title: GLib.flags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | ALNUM | 1 |
 | ALPHA | 2 |
 | CNTRL | 4 |
@@ -56,15 +56,16 @@ title: GLib.flags
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## FileSetContentsFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| NONE | 0 |
 | CONSISTENT | 1 |
 | DURABLE | 2 |
-| NONE | 0 |
 | ONLY_EXISTING | 4 |
 
 ### Other runtime attributes ‡
@@ -72,47 +73,50 @@ title: GLib.flags
 
 ### Runtime functions †
 
+<br>
 ## FileTest
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| EXISTS | 16 |
-| IS_DIR | 4 |
-| IS_EXECUTABLE | 8 |
 | IS_REGULAR | 1 |
 | IS_SYMLINK | 2 |
+| IS_DIR | 4 |
+| IS_EXECUTABLE | 8 |
+| EXISTS | 16 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## FormatSizeFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BITS | 4 |
 | DEFAULT | 0 |
-| IEC_UNITS | 2 |
 | LONG_FORMAT | 1 |
-| ONLY_UNIT | 16 |
+| IEC_UNITS | 2 |
+| BITS | 4 |
 | ONLY_VALUE | 8 |
+| ONLY_UNIT | 16 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## HookFlagMask
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | ACTIVE | 1 |
 | IN_CALL | 2 |
 | MASK | 15 |
@@ -122,88 +126,91 @@ title: GLib.flags
 
 ### Runtime functions †
 
+<br>
 ## IOCondition
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| IN | 1 |
+| PRI | 2 |
+| OUT | 4 |
 | ERR | 8 |
 | HUP | 16 |
-| IN | 1 |
 | NVAL | 32 |
-| OUT | 4 |
-| PRI | 2 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## IOFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| APPEND | 1 |
-| GET_MASK | 31 |
-| IS_READABLE | 4 |
-| IS_SEEKABLE | 16 |
-| IS_WRITABLE | 8 |
-| IS_WRITEABLE | 8 |
-| MASK | 31 |
-| NONBLOCK | 2 |
 | NONE | 0 |
+| APPEND | 1 |
+| NONBLOCK | 2 |
 | SET_MASK | 3 |
+| IS_READABLE | 4 |
+| IS_WRITEABLE | 8 |
+| IS_SEEKABLE | 16 |
+| MASK | 31 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## KeyFileFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
+| NONE | 0 |
 | KEEP_COMMENTS | 1 |
 | KEEP_TRANSLATIONS | 2 |
-| NONE | 0 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## LogLevelFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| FLAG_FATAL | 2 |
 | FLAG_RECURSION | 1 |
-| LEVEL_CRITICAL | 8 |
-| LEVEL_DEBUG | 128 |
+| FLAG_FATAL | 2 |
 | LEVEL_ERROR | 4 |
-| LEVEL_INFO | 64 |
-| LEVEL_MASK | 18446744073709551612 |
-| LEVEL_MESSAGE | 32 |
+| LEVEL_CRITICAL | 8 |
 | LEVEL_WARNING | 16 |
+| LEVEL_MESSAGE | 32 |
+| LEVEL_INFO | 64 |
+| LEVEL_DEBUG | 128 |
+| LEVEL_MASK | 18446744073709551612 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## MainContextFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | NONE | 0 |
 | OWNERLESS_POLLING | 1 |
 
@@ -212,211 +219,217 @@ title: GLib.flags
 
 ### Runtime functions †
 
+<br>
 ## MarkupCollectType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BOOLEAN | 3 |
 | INVALID | 0 |
-| OPTIONAL | 65536 |
-| STRDUP | 2 |
 | STRING | 1 |
+| STRDUP | 2 |
+| BOOLEAN | 3 |
 | TRISTATE | 4 |
+| OPTIONAL | 65536 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## MarkupParseFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | DEFAULT_FLAGS | 0 |
 | DO_NOT_USE_THIS_UNSUPPORTED_FLAG | 1 |
-| IGNORE_QUALIFIED | 8 |
-| PREFIX_ERROR_POSITION | 4 |
 | TREAT_CDATA_AS_TEXT | 2 |
+| PREFIX_ERROR_POSITION | 4 |
+| IGNORE_QUALIFIED | 8 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## OptionFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| DEPRECATED | 128 |
-| FILENAME | 16 |
+| NONE | 0 |
 | HIDDEN | 1 |
 | IN_MAIN | 2 |
-| NOALIAS | 64 |
-| NONE | 0 |
-| NO_ARG | 8 |
-| OPTIONAL_ARG | 32 |
 | REVERSE | 4 |
+| NO_ARG | 8 |
+| FILENAME | 16 |
+| OPTIONAL_ARG | 32 |
+| NOALIAS | 64 |
+| DEPRECATED | 128 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## RegexCompileFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ANCHORED | 16 |
-| BSR_ANYCRLF | 8388608 |
-| CASELESS | 1 |
 | DEFAULT | 0 |
-| DOLLAR_ENDONLY | 32 |
-| DOTALL | 4 |
-| DUPNAMES | 524288 |
-| EXTENDED | 8 |
-| FIRSTLINE | 262144 |
-| JAVASCRIPT_COMPAT | 33554432 |
+| CASELESS | 1 |
 | MULTILINE | 2 |
-| NEWLINE_ANYCRLF | 5242880 |
-| NEWLINE_CR | 1048576 |
-| NEWLINE_CRLF | 3145728 |
-| NEWLINE_LF | 2097152 |
+| DOTALL | 4 |
+| EXTENDED | 8 |
+| ANCHORED | 16 |
+| DOLLAR_ENDONLY | 32 |
+| UNGREEDY | 512 |
+| RAW | 2048 |
 | NO_AUTO_CAPTURE | 4096 |
 | OPTIMIZE | 8192 |
-| RAW | 2048 |
-| UNGREEDY | 512 |
+| FIRSTLINE | 262144 |
+| DUPNAMES | 524288 |
+| NEWLINE_CR | 1048576 |
+| NEWLINE_LF | 2097152 |
+| NEWLINE_CRLF | 3145728 |
+| NEWLINE_ANYCRLF | 5242880 |
+| BSR_ANYCRLF | 8388608 |
+| JAVASCRIPT_COMPAT | 33554432 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## RegexMatchFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ANCHORED | 16 |
-| BSR_ANY | 16777216 |
-| BSR_ANYCRLF | 8388608 |
 | DEFAULT | 0 |
+| ANCHORED | 16 |
+| NOTBOL | 128 |
+| NOTEOL | 256 |
+| NOTEMPTY | 1024 |
+| PARTIAL_SOFT | 32768 |
+| NEWLINE_CR | 1048576 |
+| NEWLINE_LF | 2097152 |
+| NEWLINE_CRLF | 3145728 |
 | NEWLINE_ANY | 4194304 |
 | NEWLINE_ANYCRLF | 5242880 |
-| NEWLINE_CR | 1048576 |
-| NEWLINE_CRLF | 3145728 |
-| NEWLINE_LF | 2097152 |
-| NOTBOL | 128 |
-| NOTEMPTY | 1024 |
-| NOTEMPTY_ATSTART | 268435456 |
-| NOTEOL | 256 |
-| PARTIAL | 32768 |
+| BSR_ANYCRLF | 8388608 |
+| BSR_ANY | 16777216 |
 | PARTIAL_HARD | 134217728 |
-| PARTIAL_SOFT | 32768 |
+| NOTEMPTY_ATSTART | 268435456 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SpawnFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CHILD_INHERITS_STDERR | 1024 |
-| CHILD_INHERITS_STDIN | 32 |
-| CHILD_INHERITS_STDOUT | 512 |
-| CLOEXEC_PIPES | 256 |
 | DEFAULT | 0 |
-| DO_NOT_REAP_CHILD | 2 |
-| FILE_AND_ARGV_ZERO | 64 |
 | LEAVE_DESCRIPTORS_OPEN | 1 |
+| DO_NOT_REAP_CHILD | 2 |
 | SEARCH_PATH | 4 |
-| SEARCH_PATH_FROM_ENVP | 128 |
-| STDERR_TO_DEV_NULL | 16 |
-| STDIN_FROM_DEV_NULL | 2048 |
 | STDOUT_TO_DEV_NULL | 8 |
+| STDERR_TO_DEV_NULL | 16 |
+| CHILD_INHERITS_STDIN | 32 |
+| FILE_AND_ARGV_ZERO | 64 |
+| SEARCH_PATH_FROM_ENVP | 128 |
+| CLOEXEC_PIPES | 256 |
+| CHILD_INHERITS_STDOUT | 512 |
+| CHILD_INHERITS_STDERR | 1024 |
+| STDIN_FROM_DEV_NULL | 2048 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TestSubprocessFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | DEFAULT | 0 |
-| INHERIT_STDERR | 4 |
 | INHERIT_STDIN | 1 |
 | INHERIT_STDOUT | 2 |
+| INHERIT_STDERR | 4 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TestTrapFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | DEFAULT | 0 |
-| INHERIT_STDIN | 512 |
-| SILENCE_STDERR | 256 |
 | SILENCE_STDOUT | 128 |
+| SILENCE_STDERR | 256 |
+| INHERIT_STDIN | 512 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## TraverseFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALL | 3 |
-| LEAFS | 1 |
 | LEAVES | 1 |
-| MASK | 3 |
-| NON_LEAFS | 2 |
 | NON_LEAVES | 2 |
+| MASK | 3 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## UriFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ENCODED | 8 |
-| ENCODED_FRAGMENT | 128 |
-| ENCODED_PATH | 64 |
-| ENCODED_QUERY | 32 |
-| HAS_AUTH_PARAMS | 4 |
-| HAS_PASSWORD | 2 |
 | NONE | 0 |
-| NON_DNS | 16 |
 | PARSE_RELAXED | 1 |
+| HAS_PASSWORD | 2 |
+| HAS_AUTH_PARAMS | 4 |
+| ENCODED | 8 |
+| NON_DNS | 16 |
+| ENCODED_QUERY | 32 |
+| ENCODED_PATH | 64 |
+| ENCODED_FRAGMENT | 128 |
 | SCHEME_NORMALIZE | 256 |
 
 ### Other runtime attributes ‡
@@ -424,36 +437,40 @@ title: GLib.flags
 
 ### Runtime functions †
 
+<br>
 ## UriHideFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| AUTH_PARAMS | 4 |
-| FRAGMENT | 16 |
 | NONE | 0 |
-| PASSWORD | 2 |
-| QUERY | 8 |
 | USERINFO | 1 |
+| PASSWORD | 2 |
+| AUTH_PARAMS | 4 |
+| QUERY | 8 |
+| FRAGMENT | 16 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## UriParamsFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CASE_INSENSITIVE | 1 |
 | NONE | 0 |
-| PARSE_RELAXED | 4 |
+| CASE_INSENSITIVE | 1 |
 | WWW_FORM | 2 |
+| PARSE_RELAXED | 4 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
+
+<br>

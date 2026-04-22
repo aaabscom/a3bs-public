@@ -226,6 +226,12 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## cairo_surface_get_buffer
+- cairo_surface_get_buffer(surface:cairo.Surface, format:Babl.Object, sync_back:bool) -> Gegl.Buffer
+
+### Runtime functions †
+
+
 ## cairo_surface_get_format
 - cairo_surface_get_format(surface:cairo.Surface) -> Babl.Object
 
@@ -682,6 +688,18 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## context_get_paint_fade_length
+- context_get_paint_fade_length() -> float
+
+### Runtime functions †
+
+
+## context_get_paint_fade_repeat
+- context_get_paint_fade_repeat() -> Gimp.RepeatMode
+
+### Runtime functions †
+
+
 ## context_get_paint_method
 - context_get_paint_method() -> str
 
@@ -1056,6 +1074,18 @@ title: Gimp.functions
 
 ## context_set_opacity
 - context_set_opacity(opacity:float) -> bool
+
+### Runtime functions †
+
+
+## context_set_paint_fade_length
+- context_set_paint_fade_length(fade_length:float) -> bool
+
+### Runtime functions †
+
+
+## context_set_paint_fade_repeat
+- context_set_paint_fade_repeat(fade_repeat:Gimp.RepeatMode) -> bool
 
 ### Runtime functions †
 
@@ -1744,6 +1774,24 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## images_close_popup
+- images_close_popup(callback:str) -> bool
+
+### Runtime functions †
+
+
+## images_popup
+- images_popup(callback:str, popup_title:str, initial_image:Gimp.Image=None, parent_window:GLib.Bytes=None) -> bool
+
+### Runtime functions †
+
+
+## images_set_popup
+- images_set_popup(callback:str, image:Gimp.Image) -> bool
+
+### Runtime functions †
+
+
 ## installation_directory
 - installation_directory() -> str
 
@@ -1764,6 +1812,24 @@ title: Gimp.functions
 
 ## is_canonical_identifier
 - is_canonical_identifier(identifier:str) -> bool
+
+### Runtime functions †
+
+
+## items_close_popup
+- items_close_popup(callback:str) -> bool
+
+### Runtime functions †
+
+
+## items_popup
+- items_popup(callback:str, popup_title:str, item_type:str, initial_item:Gimp.Item=None, parent_window:GLib.Bytes=None) -> bool
+
+### Runtime functions †
+
+
+## items_set_popup
+- items_set_popup(callback:str, item:Gimp.Item) -> bool
 
 ### Runtime functions †
 
@@ -1924,6 +1990,12 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## param_spec_curve
+- param_spec_curve(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec
+
+### Runtime functions †
+
+
 ## param_spec_display
 - param_spec_display(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec
 
@@ -2050,6 +2122,12 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## param_spec_link_layer
+- param_spec_link_layer(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec
+
+### Runtime functions †
+
+
 ## param_spec_matrix2
 - param_spec_matrix2(name:str, nick:str, blurb:str, default_value:Gimp.Matrix2, flags:GObject.ParamFlags) -> GObject.ParamSpec
 
@@ -2116,6 +2194,12 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## param_spec_rasterizable
+- param_spec_rasterizable(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec
+
+### Runtime functions †
+
+
 ## param_spec_resource
 - param_spec_resource(name:str, nick:str, blurb:str, resource_type:GType, none_ok:bool, default_value:Gimp.Resource=None, default_to_context:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec
 
@@ -2172,6 +2256,12 @@ title: Gimp.functions
 
 ## param_spec_value_array_get_element_spec
 - param_spec_value_array_get_element_spec(pspec:GObject.ParamSpec) -> GObject.ParamSpec
+
+### Runtime functions †
+
+
+## param_spec_vector_layer
+- param_spec_vector_layer(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec
 
 ### Runtime functions †
 
@@ -2338,6 +2428,12 @@ title: Gimp.functions
 ### Runtime functions †
 
 
+## resources_loaded
+- resources_loaded(resource_type:GType) -> bool
+
+### Runtime functions †
+
+
 ## show_help_button
 - show_help_button() -> bool
 
@@ -2454,6 +2550,12 @@ title: Gimp.functions
 
 ## units_to_points
 - units_to_points(value:float, unit:Gimp.Unit, resolution:float) -> float
+
+### Runtime functions †
+
+
+## update_metadata
+- update_metadata() -> bool
 
 ### Runtime functions †
 

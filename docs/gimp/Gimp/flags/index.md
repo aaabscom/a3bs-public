@@ -8,17 +8,17 @@ title: Gimp.flags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CAN_HANDLE_ALPHA | 16 |
-| CAN_HANDLE_BITMAP | 8 |
+| CAN_HANDLE_RGB | 1 |
 | CAN_HANDLE_GRAY | 2 |
 | CAN_HANDLE_INDEXED | 4 |
+| CAN_HANDLE_BITMAP | 8 |
+| CAN_HANDLE_ALPHA | 16 |
 | CAN_HANDLE_LAYERS | 32 |
 | CAN_HANDLE_LAYERS_AS_ANIMATION | 64 |
-| CAN_HANDLE_LAYER_EFFECTS | 256 |
 | CAN_HANDLE_LAYER_MASKS | 128 |
-| CAN_HANDLE_RGB | 1 |
+| CAN_HANDLE_LAYER_EFFECTS | 256 |
 | NEEDS_ALPHA | 512 |
 | NEEDS_CROP | 1024 |
 
@@ -56,56 +56,62 @@ title: Gimp.flags
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## MetadataLoadFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALL | 4294967295 |
-| COLORSPACE | 8 |
-| COMMENT | 1 |
 | NONE | 0 |
-| ORIENTATION | 4 |
+| COMMENT | 1 |
 | RESOLUTION | 2 |
+| ORIENTATION | 4 |
+| COLORSPACE | 8 |
+| ALL | 4294967295 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## MetadataSaveFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALL | 4294967295 |
-| COLOR_PROFILE | 16 |
-| COMMENT | 32 |
 | EXIF | 1 |
+| XMP | 2 |
 | IPTC | 4 |
 | THUMBNAIL | 8 |
-| XMP | 2 |
+| COLOR_PROFILE | 16 |
+| COMMENT | 32 |
+| UPDATE | 64 |
+| ALL | 4294967295 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## ProcedureSensitivityMask
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| ALWAYS | 2147483647 |
 | DRAWABLE | 1 |
 | DRAWABLES | 4 |
 | NO_DRAWABLES | 8 |
 | NO_IMAGE | 16 |
+| ALWAYS | 2147483647 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
+
+<br>

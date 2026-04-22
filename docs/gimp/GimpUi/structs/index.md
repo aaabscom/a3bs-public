@@ -64,9 +64,11 @@ title: GimpUi.structs
 ## ColorScaleEntryClass
 - :Constructors:<br /><br />::<br /><br />    ColorScaleEntryClass()
 
-## ColorScales
+## ColorScalesClass
+- :Constructors:<br /><br />::<br /><br />    ColorScalesClass()
 
-## ColorSelect
+## ColorSelectClass
+- :Constructors:<br /><br />::<br /><br />    ColorSelectClass()
 
 ## ColorSelectionClass
 - :Constructors:<br /><br />::<br /><br />    ColorSelectionClass()
@@ -114,6 +116,9 @@ title: GimpUi.structs
 ## HintBoxClass
 - :Constructors:<br /><br />::<br /><br />    HintBoxClass()
 
+## ImageChooserClass
+- :Constructors:<br /><br />::<br /><br />    ImageChooserClass()
+
 ## ImageComboBoxClass
 - :Constructors:<br /><br />::<br /><br />    ImageComboBoxClass()
 
@@ -125,6 +130,9 @@ title: GimpUi.structs
 
 ## IntStoreClass
 - :Constructors:<br /><br />::<br /><br />    IntStoreClass()
+
+## ItemChooserClass
+- :Constructors:<br /><br />::<br /><br />    ItemChooserClass()
 
 ## LabelColorClass
 - :Constructors:<br /><br />::<br /><br />    LabelColorClass()

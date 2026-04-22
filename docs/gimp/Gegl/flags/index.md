@@ -8,11 +8,11 @@ title: Gegl.flags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
 | READ | 1 |
-| READWRITE | 3 |
 | WRITE | 2 |
+| READWRITE | 3 |
 
 ### Other runtime attributes ‡
 - **denominator**
@@ -48,14 +48,15 @@ title: Gegl.flags
   - Return an array of bytes representing an integer.<br /><br />length<br />  Length of bytes object to use.  An OverflowError is raised if the<br />  integer is not representable with the given number of bytes.  Default<br />  is length 1.<br />byteorder<br />  The byte order used to represent the integer.  If byteorder is 'big',<br />  the most significant byte is at the beginning of the byte array.  If<br />  byteorder is 'little', the most significant byte is at the end of the<br />  byte array.  To request the native byte order of the host system, use<br />  sys.byteorder as the byte order value.  Default is to use 'big'.<br />signed<br />  Determines whether two's complement is used to represent the integer.<br />  If signed is False and a negative integer is given, an OverflowError<br />  is raised.
 
 
+<br>
 ## BlitFlags
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| CACHE | 1 |
 | DEFAULT | 0 |
+| CACHE | 1 |
 | DIRTY | 2 |
 
 ### Other runtime attributes ‡
@@ -63,32 +64,36 @@ title: Gegl.flags
 
 ### Runtime functions †
 
+<br>
 ## PadType
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| INPUT | 512 |
 | OUTPUT | 256 |
+| INPUT | 512 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
 
+<br>
 ## SerializeFlag
 
 ### Runtime attributes
 
+|:----------------------------------------|:---------------|
 | Name | Value |
-|------------------------|---------------|
-| BAKE_ANIM | 8 |
-| INDENT | 4 |
 | TRIM_DEFAULTS | 1 |
 | VERSION | 2 |
+| INDENT | 4 |
+| BAKE_ANIM | 8 |
 
 ### Other runtime attributes ‡
 
 
 ### Runtime functions †
+
+<br>

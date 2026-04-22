@@ -73,6 +73,9 @@ title: Gimp.structs
 - **duplicate**`(*args, **kwargs)`
   - duplicate(self)
 
+- **get_xcf_version**`(*args, **kwargs)`
+  - get_xcf_version(self) -> int
+
 - **is_equal_to**`(*args, **kwargs)`
   - is_equal_to(self, b:Gimp.Config) -> bool
 
@@ -108,6 +111,9 @@ title: Gimp.structs
 
 - **serialize_to_string**`(*args, **kwargs)`
   - serialize_to_string(self, data=None) -> str
+
+- **set_xcf_version**`(*args, **kwargs)`
+  - set_xcf_version(self, xcf_version:int)
 
 
 
@@ -171,6 +177,9 @@ title: Gimp.structs
 
 
 
+## CurveClass
+- :Constructors:<br /><br />::<br /><br />    CurveClass()
+
 ## DisplayClass
 - :Constructors:<br /><br />::<br /><br />    DisplayClass()
 
@@ -221,6 +230,9 @@ title: Gimp.structs
 
 ## LayerMaskClass
 - :Constructors:<br /><br />::<br /><br />    LayerMaskClass()
+
+## LinkLayerClass
+- :Constructors:<br /><br />::<br /><br />    LinkLayerClass()
 
 ## LoadProcedureClass
 - :Constructors:<br /><br />::<br /><br />    LoadProcedureClass()
@@ -422,6 +434,9 @@ title: Gimp.structs
 
 ## ProgressVtable
 - :Constructors:<br /><br />::<br /><br />    ProgressVtable()
+
+## RasterizableInterface
+- :Constructors:<br /><br />::<br /><br />    RasterizableInterface()
 
 ## ResourceClass
 - :Constructors:<br /><br />::<br /><br />    ResourceClass()
@@ -689,6 +704,9 @@ title: Gimp.structs
 
 ## Vector4
 - :Constructors:<br /><br />::<br /><br />    Vector4()
+
+## VectorLayerClass
+- :Constructors:<br /><br />::<br /><br />    VectorLayerClass()
 
 ## VectorLoadData
 - :Constructors:<br /><br />::<br /><br />    VectorLoadData()

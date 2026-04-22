@@ -719,6 +719,9 @@ title: GimpUi.objects
 - **get_content_area**`(*args, **kwargs)`
   - get_content_area(self) -> Gtk.Box
 
+- **get_coordinates**`(*args, **kwargs)`
+  - get_coordinates(self, coordinates_id:str, x_property:str, y_property:str, unit_property:str, unit_format:str, update_policy:GimpUi.SizeEntryUpdatePolicy, x_resolution:float, y_resolution:float) -> Gtk.Widget
+
 - **get_css_name**`(*args, **kwargs)`
   - get_css_name(self) -> str
 
