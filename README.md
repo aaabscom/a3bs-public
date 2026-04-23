@@ -1,4 +1,4 @@
-# A³BS GIMP 3 Documentation
+# A³BS GIMP 3.2.4 Documentation
 
 Public documentation for A Cubed's GIMP 3 automation tools and plugins. Expectations include structured, versioned documentation for the GIMP 3 Python plugin ecosystem created by **A Cubed Business Solutions** (A³BS).
 
@@ -29,18 +29,10 @@ a3bs-public/
 │   │   ├── Gegl/
 │   │   ├── Gimp/
 │   │   └── GimpUi/
-│   ├── install/           # GIMP 3 install guides
-│   └── overviews/         # Plugin overviews and summaries
+│   └── install/           # GIMP 3.2.4 install guide
 ├── manifest.log           # Tracks cleaned file revisions
 └── README.md              # Repo overview and contribution guide
 ```
-
-## 🔄 Workflow
-
-- All changes originate in the `a3bs-dirty/` folder.
-- Only explicitly cleaned or verified files are moved to `a3bs-clean/`.
-- Unchanged files are moved (not copied).
-- Cleaned files are committed as part of Baseline 0 and beyond.
 
 ## 🛠️ Jekyll Setup
 
@@ -49,10 +41,6 @@ Ensure the following exists at the repo root:
 
 - `_config.yml` with `theme: minima`
 - `index.md` as your site landing page
-
-## 🧼 Current Status
-
-Baseline 0 committed. `a3bs-clean/` is fully synchronized and documented.
 
 
 📄 View the live docs site: [GitHub Pages](https://aaabscom.github.io/a3bs-public/)
@@ -63,7 +51,6 @@ This repo contains:
 
 - Class documentation
 - Plugin introspection utilities
-- Batch workflows and image tools
 
 ---
 
