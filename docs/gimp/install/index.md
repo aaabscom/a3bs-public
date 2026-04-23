@@ -2,147 +2,231 @@
 layout: install
 title: GIMP Installation on Debian 13
 ---
-# Install GIMP 3.0.4 on Debian 13
 
-This guide walks through building and installing **GIMP 3.0.4** from source on **Debian 13 (Trixie)** using a clean prefix install at `$HOME/gimp-install`.
+# GIMP 3.2.4 (Custom Build + GI Integration)
+
+This guide documents a full source build of **GIMP 3.2.4** with:
+
+- Custom install prefix  
+- Working GEGL + BABL  
+- Functional GObject Introspection (GI)  
+- Python (`gi.repository`) correctly bound to the custom build  
+- Clean `.bashrc` environment management  
 
 ---
 
-## Prerequisites
+## 🧠 Goal
+
+Ensure the following are all aligned:
+
+- GIMP binary  
+- Shared libraries  
+- GI typelibs  
+- Python GI bindings  
+- Development tools (e.g., PyCharm)  
+
+---
+
+## 📦 Install Dependencies
 
 ```bash
-sudo apt update && sudo apt install -y \
-  build-essential \
-  meson \
-  ninja-build \
-  gettext \
-  git \
-  pkg-config \
-  libtool \
-  cmake \
-  bison \
-  flex \
-  python3 \
-  python3-pip \
-  libgirepository1.0-dev \
-  gobject-introspection \
-  libjson-glib-dev \
-  libgtk-3-dev \
-  libgegl-dev \
-  libbabl-dev \
-  libgdk-pixbuf2.0-dev \
-  libglib2.0-dev \
-  libgexiv2-dev \
-  liblcms2-dev \
-  libpoppler-glib-dev \
-  libxmu-dev \
-  libxext-dev \
-  libxfixes-dev \
-  libtiff-dev \
-  libjpeg-dev \
-  libwebp-dev \
-  libwebpmux3 \
-  libwebpdemux2 \
-  libarchive-dev \
-  libopenjp2-7-dev \
-  iso-codes \
-  appstream-util \
-  glib-compile-resources \
-  glib-genmarshal \
-  gettext \
-  desktop-file-utils
-```
+sudo apt update
 
-Ensure the following runtime tools are available:
-
-```bash
 sudo apt install -y \
-  appstream \
-  appstream-glib \
-  xdg-utils \
-  dbus-x11
+  build-essential meson ninja-build pkg-config \
+  libglib2.0-dev libgtk-3-dev \
+  libjpeg-dev libpng-dev libtiff-dev \
+  liblcms2-dev libmypaint-dev \
+  libjson-glib-dev libxml2-dev \
+  libgexiv2-dev libpoppler-glib-dev \
+  libbz2-dev liblzma-dev \
+  python3-gi \
+  gobject-introspection libgirepository1.0-dev
+```
+
+> ⚠️ Debian Trixie may have broken `libappstream-dev`. We build AppStream manually below.
+
+---
+
+## 📁 Set Install Prefix
+
+```bash
+export GIMP_PREFIX="$HOME/gimp-3.2.4"
 ```
 
 ---
 
-## Set Environment Variables
-
-Add these lines to your `~/.bashrc` or run in the current shell:
+## 🧱 Build BABL
 
 ```bash
-export PATH="$HOME/gimp-install/bin:$PATH"
-export PKG_CONFIG_PATH="$HOME/gimp-install/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH"
-export XDG_DATA_DIRS="$HOME/gimp-install/share:$XDG_DATA_DIRS"
+cd ~/tmp
+git clone https://gitlab.gnome.org/GNOME/babl.git
+cd babl
+
+meson setup build --prefix=$GIMP_PREFIX
+ninja -C build
+ninja -C build install
 ```
 
 ---
 
-## Build GEGL (required)
+## 🧱 Build GEGL
 
 ```bash
+cd ~/tmp
 git clone https://gitlab.gnome.org/GNOME/gegl.git
 cd gegl
-git checkout 0.4.63
-meson setup _build --prefix=$HOME/gimp-install
-ninja -C _build
-ninja -C _build install
+
+meson setup build --prefix=$GIMP_PREFIX
+ninja -C build
+ninja -C build install
 ```
 
 ---
 
-## Build GIMP 3.0.4
+## 🧱 Build curl (required for AppStream)
 
 ```bash
-git clone https://gitlab.gnome.org/GNOME/gimp.git gimp-3.0.4
-cd gimp-3.0.4
-git checkout 3.0.4
-meson setup --wipe _build \
-  --prefix=$HOME/gimp-install \
-  --buildtype=release \
-  --pkg-config-path=$HOME/gimp-install/lib/x86_64-linux-gnu/pkgconfig
-ninja -C _build
-ninja -C _build install
+cd ~/tmp
+wget https://curl.se/download/curl-8.6.0.tar.gz
+tar -xf curl-8.6.0.tar.gz
+cd curl-8.6.0
+
+./configure --prefix=$GIMP_PREFIX --with-openssl
+make -j$(nproc)
+make install
 ```
 
 ---
 
-## Launch GIMP
+## 🧱 Build libfyaml
 
 ```bash
-$HOME/gimp-install/bin/gimp-3.0
+cd ~/tmp
+git clone https://github.com/pantoniou/libfyaml.git
+cd libfyaml
+
+./bootstrap.sh
+./configure --prefix=$GIMP_PREFIX
+make -j1
+make install
 ```
 
-You may want to symlink it:
+---
+
+## 🧱 Build AppStream
 
 ```bash
-ln -s $HOME/gimp-install/bin/gimp-3.0 ~/bin/gimp3
+cd ~/tmp
+git clone https://github.com/ximion/appstream.git
+cd appstream
+
+export PKG_CONFIG_PATH="$GIMP_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+meson setup build --prefix=$GIMP_PREFIX
+ninja -C build
+ninja -C build install
 ```
 
 ---
 
-## Notes
-
-- If the build fails at the introspection phase (`.gir` files), ensure GEGL and its GIR files are correctly installed to `$XDG_DATA_DIRS`.
-- Optional plug-ins and formats (e.g., JPEG-XL, OpenEXR) require additional libraries and development packages.
-- GIMP plug-ins should be placed in: `~/.config/GIMP/3.0/plug-ins/`
-
----
-
-## Optional: Verify Plugins Directory
+## 🎨 Build GIMP 3.2.4
 
 ```bash
-ls ~/.config/GIMP/3.0/plug-ins/
+cd ~/tmp
+git clone https://gitlab.gnome.org/GNOME/gimp.git
+cd gimp
+
+git checkout GIMP_3_2_4
+git submodule update --init
+
+meson setup build --prefix=$GIMP_PREFIX
+ninja -C build
+ninja -C build install
 ```
 
 ---
 
-## Troubleshooting
+## ⚙️ Environment Setup (.bashrc)
 
-- If a `Gegl-0.4.gir` or similar include cannot be found, verify it was installed under `gimp-install/share/gir-1.0/`
-- Use `meson configure _build` to inspect and adjust options
-- Build logs are in `_build/meson-logs/`
+Add this managed block:
+
+```bash
+# === A3BS MANAGED BLOCK (BEGIN) ===
+
+export GIMP_PREFIX="$HOME/gimp-3.2.4"
+
+export PATH="$GIMP_PREFIX/bin:$PATH"
+
+export LD_LIBRARY_PATH="$GIMP_PREFIX/lib/x86_64-linux-gnu:$GIMP_PREFIX/lib"
+
+export PKG_CONFIG_PATH="$GIMP_PREFIX/lib/pkgconfig:$GIMP_PREFIX/lib/x86_64-linux-gnu/pkgconfig"
+
+export GI_TYPELIB_PATH="$GIMP_PREFIX/lib/x86_64-linux-gnu/girepository-1.0:/usr/lib/x86_64-linux-gnu/girepository-1.0"
+
+alias gimp3="$GIMP_PREFIX/bin/gimp-3.2"
+
+# === A3BS MANAGED BLOCK (END) ===
+```
+
+Reload:
+
+```bash
+source ~/.bashrc
+```
 
 ---
 
-© 2025 A Cubed Business Solutions. MIT License.
+## 🧪 Verification
 
+### 1. Binary
+
+```bash
+gimp3 --version
+```
+
+Expected:
+
+```
+GNU Image Manipulation Program version 3.2.4
+```
+
+---
+
+### 2. Linking
+
+```bash
+ldd $(which gimp3) | grep gimp
+```
+
+Expected:
+
+```
+/home/<user>/gimp-3.2.4/...
+```
+
+---
+
+### 3. GI (Python)
+
+```bash
+python3 -c "
+import gi
+gi.require_version('GIRepository','2.0')
+gi.require_version('Gimp','3.0')
+from gi.repository import GIRepository, Gimp
+print(GIRepository.Repository.get_default().get_typelib_path('Gimp'))
+"
+```
+
+Expected:
+
+```
+/home/<user>/gimp-3.2.4/.../Gimp-3.0.typelib
+```
+
+---
+
+## ✅ Result
+
+You now have a fully aligned GIMP development environment with working GI integration.

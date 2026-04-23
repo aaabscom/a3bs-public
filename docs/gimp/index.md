@@ -2,6 +2,7 @@
 layout: default
 title: GIMP Namespace Index
 ---
+
 # GLib
 - [Callbacks]({{ site.baseurl }}/docs/gimp/GLib/callbacks/)
 - [Constants]({{ site.baseurl }}/docs/gimp/GLib/constants/)
@@ -9,6 +10,7 @@ title: GIMP Namespace Index
 - [Flags]({{ site.baseurl }}/docs/gimp/GLib/flags/)
 - [Functions]({{ site.baseurl }}/docs/gimp/GLib/functions/)
 - [Structs]({{ site.baseurl }}/docs/gimp/GLib/structs/)
+
 # GObject
 - [Boxed]({{ site.baseurl }}/docs/gimp/GObject/boxed/)
 - [Callbacks]({{ site.baseurl }}/docs/gimp/GObject/callbacks/)
@@ -18,6 +20,7 @@ title: GIMP Namespace Index
 - [Interfaces]({{ site.baseurl }}/docs/gimp/GObject/interfaces/)
 - [Objects]({{ site.baseurl }}/docs/gimp/GObject/objects/)
 - [Structs]({{ site.baseurl }}/docs/gimp/GObject/structs/)
+
 # Gegl
 - [Callbacks]({{ site.baseurl }}/docs/gimp/Gegl/callbacks/)
 - [Constants]({{ site.baseurl }}/docs/gimp/Gegl/constants/)
@@ -27,6 +30,7 @@ title: GIMP Namespace Index
 - [Interfaces]({{ site.baseurl }}/docs/gimp/Gegl/interfaces/)
 - [Objects]({{ site.baseurl }}/docs/gimp/Gegl/objects/)
 - [Structs]({{ site.baseurl }}/docs/gimp/Gegl/structs/)
+
 # Gimp
 - [Boxed]({{ site.baseurl }}/docs/gimp/Gimp/boxed/)
 - [Callbacks]({{ site.baseurl }}/docs/gimp/Gimp/callbacks/)
@@ -37,6 +41,7 @@ title: GIMP Namespace Index
 - [Interfaces]({{ site.baseurl }}/docs/gimp/Gimp/interfaces/)
 - [Objects]({{ site.baseurl }}/docs/gimp/Gimp/objects/)
 - [Structs]({{ site.baseurl }}/docs/gimp/Gimp/structs/)
+
 # GimpUi
 - [Callbacks]({{ site.baseurl }}/docs/gimp/GimpUi/callbacks/)
 - [Constants]({{ site.baseurl }}/docs/gimp/GimpUi/constants/)
